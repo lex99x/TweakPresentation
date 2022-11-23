@@ -32,7 +32,7 @@ struct CreateEventModal: View {
                     Section(header: Text("Event details")) {
                         
                         TextField("Title", text: $event.eventTitle)
-                        TextField("Small description (optional)", text: $event.eventDescription)
+                        TextField("Memory Trigger", text: $event.eventDescription)
                         
                         HStack {
                             Text("Starts at")
@@ -139,21 +139,21 @@ struct CreateEventModal: View {
                         
                     }
                     .listRowBackground(Color(.CorFundoTextFieldsBo3))
-                    Section(header:
-                                Text("Memory trigger"),
-                            footer:
-                                Text("Choose a memory trigger type to customize your event.")
-                        .font(.system(size: 11))) {
-                            
-                            Picker("Type", selection: $selectedEventType) {
-                                Text("None").tag(EventType.none)
-                                Text("Keywords").tag(EventType.keywords)
-                                Text("Color").tag(EventType.color)
-                                Text("Image").tag(EventType.image)
-                            }
-                            
-                        }
-                        .listRowBackground(Color(.CorFundoTextFieldsBo3))
+//                    Section(header:
+//                                Text("Memory trigger"),
+//                            footer:
+//                                Text("Choose a memory trigger type to customize your event.")
+//                        .font(.system(size: 11))) {
+//                            
+////                            Picker("Type", selection: $selectedEventType) {
+////                                Text("None").tag(EventType.none)
+////                                Text("Keywords").tag(EventType.keywords)
+////                                Text("Color").tag(EventType.color)
+////                                Text("Image").tag(EventType.image)
+////                            }
+//                            
+//                        }
+//                        .listRowBackground(Color(.CorFundoTextFieldsBo3))
                 }
                 .scrollContentBackground(.hidden)
                 .background(
