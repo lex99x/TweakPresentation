@@ -6,7 +6,7 @@ struct TimerView: View {
         else if mainTimer >= presentation.totalTime - 120 && mainTimer <= presentation.totalTime{return Color.yellow}
         else {return Color.white}
     }
-    var presentation : Presentation
+    var presentation : SimplePresentation
     @State var mainTimer : Int = 0
     
     var body: some View {
@@ -38,9 +38,9 @@ struct TimerView: View {
 }
 
 
-struct TimerView_Previews: PreviewProvider {
-    static var teste = getMockedPresentations()
-    static var previews: some View {
-        TimerView(presentation: teste[0])
-    }
-}
+//struct TimerView_Previews: PreviewProvider {
+//    static var teste :
+//    static var previews: some View {
+//        TimerView(presentation: teste[0])
+//    }
+//}

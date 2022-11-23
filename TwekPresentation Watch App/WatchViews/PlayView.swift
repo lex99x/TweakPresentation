@@ -87,7 +87,7 @@ struct PlayView: View {
                     
                 }
                 if jump == true {
-                    NavigationLink(destination: ManualPresentationView(), isActive: $jump) {
+                    NavigationLink(destination: ManualPresentationView(presentation: presentation), isActive: $jump) {
                         EmptyView()
                     }
                     
