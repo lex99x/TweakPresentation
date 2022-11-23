@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17664FC8292DAFDC00441630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A1D44C292D910E006F9301 /* Assets.xcassets */; };
+		51A1D449292D910C006F9301 /* TwekPresentationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D448292D910C006F9301 /* TwekPresentationApp.swift */; };
+		51A1D44D292D910E006F9301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A1D44C292D910E006F9301 /* Assets.xcassets */; };
+		51A1D456292D910E006F9301 /* Tweak.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 51A1D455292D910E006F9301 /* Tweak.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		51A1D45B292D910E006F9301 /* TwekPresentationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D45A292D910E006F9301 /* TwekPresentationApp.swift */; };
+		51A1D45F292D910E006F9301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A1D45E292D910E006F9301 /* Assets.xcassets */; };
+		51A1D473292D91AC006F9301 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D472292D91AC006F9301 /* SessionDelegate.swift */; };
+		51A1D474292D91AC006F9301 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D472292D91AC006F9301 /* SessionDelegate.swift */; };
+		51A1D476292D91D9006F9301 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D475292D91D9006F9301 /* Counter.swift */; };
+		51A1D477292D91D9006F9301 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D475292D91D9006F9301 /* Counter.swift */; };
+		51A1D479292D9205006F9301 /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D478292D9205006F9301 /* Presentation.swift */; };
+		51A1D47A292D9205006F9301 /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D478292D9205006F9301 /* Presentation.swift */; };
+		51A1D47C292D920F006F9301 /* DayTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D47B292D920F006F9301 /* DayTime.swift */; };
+		51A1D47D292D920F006F9301 /* DayTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D47B292D920F006F9301 /* DayTime.swift */; };
+		51A1D47F292D921A006F9301 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D47E292D921A006F9301 /* Event.swift */; };
+		51A1D480292D921A006F9301 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D47E292D921A006F9301 /* Event.swift */; };
+		51A1D482292D9250006F9301 /* ListPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D481292D9250006F9301 /* ListPresentationView.swift */; };
+		51A1D485292D926B006F9301 /* CreatePresentationModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D484292D926B006F9301 /* CreatePresentationModal.swift */; };
+		51A1D48B292D9291006F9301 /* ListEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D48A292D9291006F9301 /* ListEventsView.swift */; };
+		51A1D48E292D92A4006F9301 /* ListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D48D292D92A4006F9301 /* ListCardView.swift */; };
+		51A1D491292D92BB006F9301 /* CreateEventModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D490292D92BB006F9301 /* CreateEventModal.swift */; };
+		51A1D494292D92CA006F9301 /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D493292D92CA006F9301 /* EventCardView.swift */; };
+		51A1D497292D92E6006F9301 /* UIColor+getColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D496292D92E6006F9301 /* UIColor+getColor.swift */; };
+		51A1D49A292D9309006F9301 /* SecondsTransformationFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D499292D9309006F9301 /* SecondsTransformationFunc.swift */; };
+		51A1D49B292D9309006F9301 /* SecondsTransformationFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D499292D9309006F9301 /* SecondsTransformationFunc.swift */; };
+		51A1D49E292D9417006F9301 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 51A1D49D292D9417006F9301 /* Realm */; };
+		51A1D4A0292D9417006F9301 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 51A1D49F292D9417006F9301 /* RealmSwift */; };
+		51A1D4A3292D9554006F9301 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 51A1D4A2292D9554006F9301 /* Realm */; };
+		51A1D4A5292D9557006F9301 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 51A1D4A4292D9557006F9301 /* RealmSwift */; };
+		51A1D4A6292D96C3006F9301 /* UIColor+getColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D496292D92E6006F9301 /* UIColor+getColor.swift */; };
+		51A1D4A9292D99BA006F9301 /* ManualPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4A8292D99BA006F9301 /* ManualPresentationView.swift */; };
+		51A1D4AB292D99C4006F9301 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4AA292D99C4006F9301 /* PlayView.swift */; };
+		51A1D4AD292D99D0006F9301 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4AC292D99D0006F9301 /* TimerView.swift */; };
+		51A1D4AF292D99E2006F9301 /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4AE292D99E2006F9301 /* EventCard.swift */; };
+		51A1D4B1292D99F5006F9301 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4B0292D99F5006F9301 /* ActionView.swift */; };
+		51A1D4B3292D99FF006F9301 /* QuitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4B2292D99FF006F9301 /* QuitView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		51A1D457292D910E006F9301 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A1D43D292D910C006F9301 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51A1D454292D910E006F9301;
+			remoteInfo = "TwekPresentation Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		51A1D468292D910E006F9301 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				51A1D456292D910E006F9301 /* Tweak.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		174E2995292DA7BB002E100A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		51A1D445292D910C006F9301 /* TwekPresentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwekPresentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51A1D448292D910C006F9301 /* TwekPresentationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwekPresentationApp.swift; sourceTree = "<group>"; };
+		51A1D44C292D910E006F9301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51A1D455292D910E006F9301 /* Tweak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tweak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51A1D45A292D910E006F9301 /* TwekPresentationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwekPresentationApp.swift; sourceTree = "<group>"; };
+		51A1D45E292D910E006F9301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51A1D472292D91AC006F9301 /* SessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		51A1D475292D91D9006F9301 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		51A1D478292D9205006F9301 /* Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
+		51A1D47B292D920F006F9301 /* DayTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTime.swift; sourceTree = "<group>"; };
+		51A1D47E292D921A006F9301 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		51A1D481292D9250006F9301 /* ListPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresentationView.swift; sourceTree = "<group>"; };
+		51A1D484292D926B006F9301 /* CreatePresentationModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePresentationModal.swift; sourceTree = "<group>"; };
+		51A1D48A292D9291006F9301 /* ListEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsView.swift; sourceTree = "<group>"; };
+		51A1D48D292D92A4006F9301 /* ListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCardView.swift; sourceTree = "<group>"; };
+		51A1D490292D92BB006F9301 /* CreateEventModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventModal.swift; sourceTree = "<group>"; };
+		51A1D493292D92CA006F9301 /* EventCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardView.swift; sourceTree = "<group>"; };
+		51A1D496292D92E6006F9301 /* UIColor+getColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+getColor.swift"; sourceTree = "<group>"; };
+		51A1D499292D9309006F9301 /* SecondsTransformationFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondsTransformationFunc.swift; sourceTree = "<group>"; };
+		51A1D4A8292D99BA006F9301 /* ManualPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualPresentationView.swift; sourceTree = "<group>"; };
+		51A1D4AA292D99C4006F9301 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		51A1D4AC292D99D0006F9301 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		51A1D4AE292D99E2006F9301 /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
+		51A1D4B0292D99F5006F9301 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		51A1D4B2292D99FF006F9301 /* QuitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51A1D442292D910C006F9301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51A1D4A0292D9417006F9301 /* RealmSwift in Frameworks */,
+				51A1D49E292D9417006F9301 /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A1D452292D910E006F9301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51A1D4A5292D9557006F9301 /* RealmSwift in Frameworks */,
+				51A1D4A3292D9554006F9301 /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		174E2998292DA915002E100A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				51A1D44C292D910E006F9301 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		51A1D43C292D910C006F9301 = {
+			isa = PBXGroup;
+			children = (
+				51A1D447292D910C006F9301 /* TwekPresentation */,
+				51A1D459292D910E006F9301 /* TwekPresentation Watch App */,
+				51A1D446292D910C006F9301 /* Products */,
+				174E2995292DA7BB002E100A /* .gitignore */,
+			);
+			sourceTree = "<group>";
+		};
+		51A1D446292D910C006F9301 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51A1D445292D910C006F9301 /* TwekPresentation.app */,
+				51A1D455292D910E006F9301 /* Tweak.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51A1D447292D910C006F9301 /* TwekPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				51A1D448292D910C006F9301 /* TwekPresentationApp.swift */,
+				51A1D46E292D9162006F9301 /* Views */,
+				51A1D46D292D9155006F9301 /* Models */,
+				51A1D470292D9180006F9301 /* Utilities */,
+				51A1D46F292D916F006F9301 /* Extensions */,
+				51A1D46C292D914B006F9301 /* Shared */,
+				174E2998292DA915002E100A /* Resources */,
+			);
+			path = TwekPresentation;
+			sourceTree = "<group>";
+		};
+		51A1D459292D910E006F9301 /* TwekPresentation Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				51A1D45A292D910E006F9301 /* TwekPresentationApp.swift */,
+				51A1D4A7292D999A006F9301 /* WatchViews */,
+				51A1D45E292D910E006F9301 /* Assets.xcassets */,
+			);
+			path = "TwekPresentation Watch App";
+			sourceTree = "<group>";
+		};
+		51A1D46C292D914B006F9301 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				51A1D472292D91AC006F9301 /* SessionDelegate.swift */,
+				51A1D475292D91D9006F9301 /* Counter.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		51A1D46D292D9155006F9301 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51A1D478292D9205006F9301 /* Presentation.swift */,
+				51A1D47B292D920F006F9301 /* DayTime.swift */,
+				51A1D47E292D921A006F9301 /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		51A1D46E292D9162006F9301 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51A1D481292D9250006F9301 /* ListPresentationView.swift */,
+				51A1D484292D926B006F9301 /* CreatePresentationModal.swift */,
+				51A1D48A292D9291006F9301 /* ListEventsView.swift */,
+				51A1D48D292D92A4006F9301 /* ListCardView.swift */,
+				51A1D490292D92BB006F9301 /* CreateEventModal.swift */,
+				51A1D493292D92CA006F9301 /* EventCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		51A1D46F292D916F006F9301 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				51A1D496292D92E6006F9301 /* UIColor+getColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		51A1D470292D9180006F9301 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				51A1D499292D9309006F9301 /* SecondsTransformationFunc.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		51A1D4A7292D999A006F9301 /* WatchViews */ = {
+			isa = PBXGroup;
+			children = (
+				51A1D4A8292D99BA006F9301 /* ManualPresentationView.swift */,
+				51A1D4AA292D99C4006F9301 /* PlayView.swift */,
+				51A1D4AC292D99D0006F9301 /* TimerView.swift */,
+				51A1D4AE292D99E2006F9301 /* EventCard.swift */,
+				51A1D4B0292D99F5006F9301 /* ActionView.swift */,
+				51A1D4B2292D99FF006F9301 /* QuitView.swift */,
+			);
+			path = WatchViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51A1D444292D910C006F9301 /* TwekPresentation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51A1D469292D910E006F9301 /* Build configuration list for PBXNativeTarget "TwekPresentation" */;
+			buildPhases = (
+				51A1D441292D910C006F9301 /* Sources */,
+				51A1D442292D910C006F9301 /* Frameworks */,
+				51A1D443292D910C006F9301 /* Resources */,
+				51A1D468292D910E006F9301 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51A1D458292D910E006F9301 /* PBXTargetDependency */,
+			);
+			name = TwekPresentation;
+			packageProductDependencies = (
+				51A1D49D292D9417006F9301 /* Realm */,
+				51A1D49F292D9417006F9301 /* RealmSwift */,
+			);
+			productName = TwekPresentation;
+			productReference = 51A1D445292D910C006F9301 /* TwekPresentation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		51A1D454292D910E006F9301 /* TwekPresentation Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51A1D465292D910E006F9301 /* Build configuration list for PBXNativeTarget "TwekPresentation Watch App" */;
+			buildPhases = (
+				51A1D451292D910E006F9301 /* Sources */,
+				51A1D452292D910E006F9301 /* Frameworks */,
+				51A1D453292D910E006F9301 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TwekPresentation Watch App";
+			packageProductDependencies = (
+				51A1D4A2292D9554006F9301 /* Realm */,
+				51A1D4A4292D9557006F9301 /* RealmSwift */,
+			);
+			productName = "TwekPresentation Watch App";
+			productReference = 51A1D455292D910E006F9301 /* Tweak.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51A1D43D292D910C006F9301 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					51A1D444292D910C006F9301 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					51A1D454292D910E006F9301 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 51A1D440292D910C006F9301 /* Build configuration list for PBXProject "TwekPresentation" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 51A1D43C292D910C006F9301;
+			packageReferences = (
+				51A1D49C292D9417006F9301 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
+			productRefGroup = 51A1D446292D910C006F9301 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51A1D444292D910C006F9301 /* TwekPresentation */,
+				51A1D454292D910E006F9301 /* TwekPresentation Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51A1D443292D910C006F9301 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51A1D44D292D910E006F9301 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A1D453292D910E006F9301 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17664FC8292DAFDC00441630 /* Assets.xcassets in Resources */,
+				51A1D45F292D910E006F9301 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51A1D441292D910C006F9301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51A1D482292D9250006F9301 /* ListPresentationView.swift in Sources */,
+				51A1D48B292D9291006F9301 /* ListEventsView.swift in Sources */,
+				51A1D476292D91D9006F9301 /* Counter.swift in Sources */,
+				51A1D485292D926B006F9301 /* CreatePresentationModal.swift in Sources */,
+				51A1D491292D92BB006F9301 /* CreateEventModal.swift in Sources */,
+				51A1D473292D91AC006F9301 /* SessionDelegate.swift in Sources */,
+				51A1D494292D92CA006F9301 /* EventCardView.swift in Sources */,
+				51A1D497292D92E6006F9301 /* UIColor+getColor.swift in Sources */,
+				51A1D479292D9205006F9301 /* Presentation.swift in Sources */,
+				51A1D449292D910C006F9301 /* TwekPresentationApp.swift in Sources */,
+				51A1D49A292D9309006F9301 /* SecondsTransformationFunc.swift in Sources */,
+				51A1D47F292D921A006F9301 /* Event.swift in Sources */,
+				51A1D48E292D92A4006F9301 /* ListCardView.swift in Sources */,
+				51A1D47C292D920F006F9301 /* DayTime.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A1D451292D910E006F9301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51A1D477292D91D9006F9301 /* Counter.swift in Sources */,
+				51A1D474292D91AC006F9301 /* SessionDelegate.swift in Sources */,
+				51A1D4A9292D99BA006F9301 /* ManualPresentationView.swift in Sources */,
+				51A1D47A292D9205006F9301 /* Presentation.swift in Sources */,
+				51A1D4B3292D99FF006F9301 /* QuitView.swift in Sources */,
+				51A1D45B292D910E006F9301 /* TwekPresentationApp.swift in Sources */,
+				51A1D4B1292D99F5006F9301 /* ActionView.swift in Sources */,
+				51A1D4AD292D99D0006F9301 /* TimerView.swift in Sources */,
+				51A1D49B292D9309006F9301 /* SecondsTransformationFunc.swift in Sources */,
+				51A1D4A6292D96C3006F9301 /* UIColor+getColor.swift in Sources */,
+				51A1D480292D921A006F9301 /* Event.swift in Sources */,
+				51A1D47D292D920F006F9301 /* DayTime.swift in Sources */,
+				51A1D4AB292D99C4006F9301 /* PlayView.swift in Sources */,
+				51A1D4AF292D99E2006F9301 /* EventCard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51A1D458292D910E006F9301 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51A1D454292D910E006F9301 /* TwekPresentation Watch App */;
+			targetProxy = 51A1D457292D910E006F9301 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		51A1D463292D910E006F9301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		51A1D464292D910E006F9301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		51A1D466292D910E006F9301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tweakpresentation.app;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tweakpresentation.app.watch;
+				PRODUCT_NAME = Tweak;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		51A1D467292D910E006F9301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tweakpresentation.app;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tweakpresentation.app.watch;
+				PRODUCT_NAME = Tweak;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		51A1D46A292D910E006F9301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TwekPresentation/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TwekPresentation;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tweakpresentation.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		51A1D46B292D910E006F9301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TwekPresentation/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TwekPresentation;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tweakpresentation.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51A1D440292D910C006F9301 /* Build configuration list for PBXProject "TwekPresentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51A1D463292D910E006F9301 /* Debug */,
+				51A1D464292D910E006F9301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51A1D465292D910E006F9301 /* Build configuration list for PBXNativeTarget "TwekPresentation Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51A1D466292D910E006F9301 /* Debug */,
+				51A1D467292D910E006F9301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51A1D469292D910E006F9301 /* Build configuration list for PBXNativeTarget "TwekPresentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51A1D46A292D910E006F9301 /* Debug */,
+				51A1D46B292D910E006F9301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		51A1D49C292D9417006F9301 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.32.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		51A1D49D292D9417006F9301 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A1D49C292D9417006F9301 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		51A1D49F292D9417006F9301 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A1D49C292D9417006F9301 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		51A1D4A2292D9554006F9301 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A1D49C292D9417006F9301 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		51A1D4A4292D9557006F9301 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A1D49C292D9417006F9301 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 51A1D43D292D910C006F9301 /* Project object */;
+}
