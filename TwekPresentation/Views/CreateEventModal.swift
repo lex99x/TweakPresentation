@@ -184,7 +184,6 @@ struct CreateEventModal: View {
                         event.log()
                         event.save(presentation: presentation)
                         
-                        print(Presentation.readAll())
                         
                         dismiss()
                         
@@ -195,9 +194,6 @@ struct CreateEventModal: View {
             }
             .navigationTitle(Text("New Event"))
             .navigationBarTitleDisplayMode(.inline)
-            .onAppear(perform: {
-                print(presentation)
-            })
         }
         
     }

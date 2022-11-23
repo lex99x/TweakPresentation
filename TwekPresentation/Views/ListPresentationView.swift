@@ -16,31 +16,6 @@ struct ListPresentationView: View {
     var body: some View {
         NavigationView {
             VStack{
-                if NaoTemApresentacao  {
-                    VStack {
-                        Text("Não há nada para ensaiar agora.\n\nToque no ícone “+” para criar uma nova apresentação.")
-                            .foregroundColor(.gray)
-                            .navigationBarTitle("Presentations", displayMode: .inline)
-                            .toolbar {
-                                Button(action: {
-                                    showingSheet.toggle()
-                                }, label: {
-                                    Image(systemName: "plus")
-                                        .foregroundColor(Color(.RoxoWatch))
-                                })
-                            }
-                            .multilineTextAlignment(.center)
-                            .padding(.top, 95)
-                            .sheet(isPresented: $showingSheet, onDismiss:{
-                                    NaoTemApresentacao = false
-                            }, content: {
-                                CreatePresentationModal()
-                            })
-                                                    Spacer()
-                    }
-                                    }
-                else{
-                    
                     List(ListaDeApresentacoes){ apresentacao in
                         NavigationLink(destination: ListEventsView(presentation: apresentacao), label: {
                             ListCardView(apresentacao: apresentacao)
@@ -51,6 +26,8 @@ struct ListPresentationView: View {
                     .scrollContentBackground(.hidden)
                     .refreshable {
                         ListaDeApresentacoes = Array(Presentation.readAll())
+                        counter.increment()
+                        
                     }
                     .padding(.top,2)
                     .navigationBarTitle("Presentations", displayMode: .inline)
@@ -63,11 +40,15 @@ struct ListPresentationView: View {
                                 .foregroundColor(Color(.RoxoWatch))
                         })
                     }
-//                    .multilineTextAlignment(.center)
-//                    .padding(.top, 95)
                     .sheet(isPresented: $showingSheet, content: {
                         CreatePresentationModal()
                     })
+                HStack{
+                    Image(systemName: "arrow.clockwise")
+                    Text("Arraste pra baixo pra atualizar")
+                        .font(.system(size: 14))
+                        .foregroundColor(Color(.DarkText1))
+                        .multilineTextAlignment(.center)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -85,4 +66,7 @@ struct ListPresentationView_Previews: PreviewProvider {
 
 
 
-
+//
+////                        print(Encode(payload: PresentationToSimplePresentation(apresentacoes: ListaDeApresentacoes)))
+//                        var listaDescondada = Decode(data: listaEncodada)
+//                        print(listaDescondada)

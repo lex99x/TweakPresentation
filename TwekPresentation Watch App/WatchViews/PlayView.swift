@@ -2,19 +2,19 @@
 import SwiftUI
 
 struct PlayView: View {
-    @StateObject var counter = Counter()
 
     @State var timeRemaining = 3
     @State var contando = false
     @State var jump = false
-    @State var presentation = getMockedPresentations()
+    @State var presentation : SimplePresentation
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
    
     var body: some View {
         NavigationView{
             ZStack{
                 VStack{
-                    Text("\(counter.count)")
+                  
+                    Text("\(presentation.title)")
                         .font(.system(size:17))
                         .offset(y:5)
                         .padding()
@@ -34,20 +34,20 @@ struct PlayView: View {
                             })
                     }
                     HStack(spacing:8){
-                        Text("\(presentation[0].events.count) eventos")
+                        Text("\(presentation.events.count) eventos")
                             .frame(width: 80)
                             .background(Color(.CorFundoCard))
                             .cornerRadius(8)
                             .font(.system(size:14))
-                        if (presentation[0].totalTime >= 3600){
-                            Text("\(secondsToHoursMinutesSeconds(presentation[0].totalTime))")
+                        if (presentation.totalTime >= 3600){
+                            Text("\(secondsToHoursMinutesSeconds(presentation.totalTime))")
                                 .frame(width: 80)
                                 .background(Color(.CorFundoCard))
                                 .cornerRadius(8)
                                 .font(.system(size:14))
                         }
                         else{
-                            Text("\(secondsToMinutesSeconds(presentation[0].totalTime))")
+                            Text("\(secondsToMinutesSeconds(presentation.totalTime))")
                                 .frame(width: 80)
                                 .background(Color(.CorFundoCard))
                                 .cornerRadius(8)
@@ -87,7 +87,7 @@ struct PlayView: View {
                     
                 }
                 if jump == true {
-                    NavigationLink(destination: ManualPresentationView(), isActive: $jump) {
+                    NavigationLink(destination: ManualPresentationView(presentation: presentation), isActive: $jump) {
                         EmptyView()
                     }
                     
@@ -97,8 +97,8 @@ struct PlayView: View {
         }
     }
 }
-struct playView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlayView()
-    }
-}
+//struct playView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlayView()
+//    }
+//}

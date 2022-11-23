@@ -3,7 +3,7 @@ import SwiftUI
 
 struct EventCard: View {
     
-    var evento: Event
+    var evento: SimpleEvents
     @State var start = Date()
     
     var body: some View {
@@ -41,7 +41,7 @@ struct EventCard: View {
 
 
 struct EventCardShow: View {
-    var apresentacao : Presentation
+    var apresentacao : SimplePresentation
     var body: some View {
         if apresentacao.events.count == 0{
             

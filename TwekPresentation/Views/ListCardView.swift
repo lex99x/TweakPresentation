@@ -35,7 +35,7 @@ struct ListCardView: View {
                 }
             }
             HStack(spacing: 8){
-                Text("\(apresentacao.totalTime)")
+                Text("\(secondsToMinutesSeconds(apresentacao.totalTime))")
                     .font(.system(size: 15))
                     .foregroundColor(Color(.DarkText1))
                     .padding(7)

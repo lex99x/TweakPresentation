@@ -48,6 +48,7 @@ class Presentation: Object,Identifiable  {
         
         return realm.objects(Presentation.self)
         
+        
     }
     
     func log() {
