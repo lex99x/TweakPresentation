@@ -43,6 +43,11 @@
 		51A1D4AF292D99E2006F9301 /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4AE292D99E2006F9301 /* EventCard.swift */; };
 		51A1D4B1292D99F5006F9301 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4B0292D99F5006F9301 /* ActionView.swift */; };
 		51A1D4B3292D99FF006F9301 /* QuitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4B2292D99FF006F9301 /* QuitView.swift */; };
+		51A1D4BF292DC58E006F9301 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4BE292DC58E006F9301 /* File.swift */; };
+		51A1D4C1292DCA15006F9301 /* PresentationWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C0292DCA15006F9301 /* PresentationWithoutRealm.swift */; };
+		51A1D4C2292DCA15006F9301 /* PresentationWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C0292DCA15006F9301 /* PresentationWithoutRealm.swift */; };
+		51A1D4C4292DCA23006F9301 /* EventWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */; };
+		51A1D4C5292DCA23006F9301 /* EventWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +101,9 @@
 		51A1D4AE292D99E2006F9301 /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
 		51A1D4B0292D99F5006F9301 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		51A1D4B2292D99FF006F9301 /* QuitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitView.swift; sourceTree = "<group>"; };
+		51A1D4BE292DC58E006F9301 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		51A1D4C0292DCA15006F9301 /* PresentationWithoutRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationWithoutRealm.swift; sourceTree = "<group>"; };
+		51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWithoutRealm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +194,8 @@
 				51A1D478292D9205006F9301 /* Presentation.swift */,
 				51A1D47B292D920F006F9301 /* DayTime.swift */,
 				51A1D47E292D921A006F9301 /* Event.swift */,
+				51A1D4C0292DCA15006F9301 /* PresentationWithoutRealm.swift */,
+				51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,6 +209,7 @@
 				51A1D48D292D92A4006F9301 /* ListCardView.swift */,
 				51A1D490292D92BB006F9301 /* CreateEventModal.swift */,
 				51A1D493292D92CA006F9301 /* EventCardView.swift */,
+				51A1D4BE292DC58E006F9301 /* File.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -349,11 +360,14 @@
 				51A1D476292D91D9006F9301 /* Counter.swift in Sources */,
 				51A1D485292D926B006F9301 /* CreatePresentationModal.swift in Sources */,
 				51A1D491292D92BB006F9301 /* CreateEventModal.swift in Sources */,
+				51A1D4C4292DCA23006F9301 /* EventWithoutRealm.swift in Sources */,
 				51A1D473292D91AC006F9301 /* SessionDelegate.swift in Sources */,
 				51A1D494292D92CA006F9301 /* EventCardView.swift in Sources */,
 				51A1D497292D92E6006F9301 /* UIColor+getColor.swift in Sources */,
 				51A1D479292D9205006F9301 /* Presentation.swift in Sources */,
 				51A1D449292D910C006F9301 /* TwekPresentationApp.swift in Sources */,
+				51A1D4C1292DCA15006F9301 /* PresentationWithoutRealm.swift in Sources */,
+				51A1D4BF292DC58E006F9301 /* File.swift in Sources */,
 				51A1D49A292D9309006F9301 /* SecondsTransformationFunc.swift in Sources */,
 				51A1D47F292D921A006F9301 /* Event.swift in Sources */,
 				51A1D48E292D92A4006F9301 /* ListCardView.swift in Sources */,
@@ -374,7 +388,9 @@
 				51A1D4B1292D99F5006F9301 /* ActionView.swift in Sources */,
 				51A1D4AD292D99D0006F9301 /* TimerView.swift in Sources */,
 				51A1D49B292D9309006F9301 /* SecondsTransformationFunc.swift in Sources */,
+				51A1D4C5292DCA23006F9301 /* EventWithoutRealm.swift in Sources */,
 				51A1D4A6292D96C3006F9301 /* UIColor+getColor.swift in Sources */,
+				51A1D4C2292DCA15006F9301 /* PresentationWithoutRealm.swift in Sources */,
 				51A1D480292D921A006F9301 /* Event.swift in Sources */,
 				51A1D47D292D920F006F9301 /* DayTime.swift in Sources */,
 				51A1D4AB292D99C4006F9301 /* PlayView.swift in Sources */,

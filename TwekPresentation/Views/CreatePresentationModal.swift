@@ -96,13 +96,11 @@ struct CreatePresentationModal: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
+                        
                         presentation.totalTime = dayTimeToSeconds(hour: selectedDuration.hour,
                                                                   minute: selectedDuration.minute,
                                                                   second: selectedDuration.second)
-                        
-                     
                         presentation.save()
-                        print(Array(Presentation.readAll()))
                         cancelar.wrappedValue.dismiss()
                     }
                     .foregroundColor(Color(.RoxoWatch))

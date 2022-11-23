@@ -51,6 +51,9 @@ struct ListPresentationView: View {
                     .scrollContentBackground(.hidden)
                     .refreshable {
                         ListaDeApresentacoes = Array(Presentation.readAll())
+                        var listaEncodada = Encode(payload: PresentationToSimplePresentation(apresentacoes: ListaDeApresentacoes))
+
+                        
                     }
                     .padding(.top,2)
                     .navigationBarTitle("Presentations", displayMode: .inline)
@@ -85,4 +88,7 @@ struct ListPresentationView_Previews: PreviewProvider {
 
 
 
-
+//
+////                        print(Encode(payload: PresentationToSimplePresentation(apresentacoes: ListaDeApresentacoes)))
+//                        var listaDescondada = Decode(data: listaEncodada)
+//                        print(listaDescondada)

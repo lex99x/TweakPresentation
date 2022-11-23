@@ -27,6 +27,8 @@ final class Counter: ObservableObject {
     }
     
     func increment() {
+        var listaDeApresentacoes  = Array(Presentation.readAll())
+        var listaEncodada = Encode(payload: PresentationToSimplePresentation(apresentacoes: listaDeApresentacoes))
         
         session.sendMessage(["count": count], replyHandler: nil) { error in
             print(error.localizedDescription)
