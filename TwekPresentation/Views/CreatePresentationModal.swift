@@ -100,9 +100,9 @@ struct CreatePresentationModal: View {
                                                                   minute: selectedDuration.minute,
                                                                   second: selectedDuration.second)
                         
-                        presentation.log()
+                     
                         presentation.save()
-                        print(Presentation.readAll())
+                        print(Array(Presentation.readAll()))
                         cancelar.wrappedValue.dismiss()
                     }
                     .foregroundColor(Color(.RoxoWatch))
