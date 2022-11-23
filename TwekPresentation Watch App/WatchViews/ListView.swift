@@ -9,28 +9,42 @@ import SwiftUI
 
 
 struct ListView: View {
-  
-    @StateObject var counter = Counter()
-
-    var body: some View {
-        if Decode(data: counter.count) == []{
-            Text("Crie uma apresentacao no watch e toque aqui")
-        }
-        else{
-            List(Decode(data: counter.count)) { apresentacao in
-                Text(apresentacao.title)
-            }
-            //        Text("ola")
-            //            .onTapGesture {
-            //                print(Decode(data: counter.count))
-            //            }
-            
-            
-        }
-    }
-        
     
+    @StateObject var counter = Counter()
+    
+    var body: some View {
+        NavigationView{
+            VStack{
+                var apresentacoes = Decode(data: counter.count)
+                List(apresentacoes) { apresentacao in
+                    
+                    NavigationLink(destination: PlayView(presentation :apresentacao), label: {
+                        Text(apresentacao.title)
+                    })
+                  
+                    
+                }
+                .scrollContentBackground(.hidden)
+               
+                if apresentacoes == [] {
+                    HStack{
+                        Image(systemName: "arrow.clockwise")
+                        Text("Refresh in your iphone")
+                            .font(.system(size: 12))
+                            .foregroundColor(Color(.DarkText1))
+                            .multilineTextAlignment(.center)
+                    }
+                }
+                
+            }
+        }
+        
+        
+    }
 }
+
+
+
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {

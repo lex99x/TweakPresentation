@@ -19,7 +19,7 @@ struct ListEventsView: View {
                 Text(presentation.descript)
                     .padding(.leading, 10)
                 HStack {
-                    Text("\(presentation.totalTime) minutes")
+                    Text("\(secondsToMinutesSecondsWithText(presentation.totalTime)) ")
                     Text("| \(presentation.events.count) events")
                 }
                 .padding(.top, 16)
