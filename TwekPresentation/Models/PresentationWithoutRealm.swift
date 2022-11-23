@@ -1,9 +1,11 @@
 import Foundation
 import RealmSwift
 
-struct SimplePresentation: Codable,Equatable {
+struct SimplePresentation: Codable,Equatable,Identifiable {
+  
+
    
-    
+    let id = UUID()
     var title: String
     var descript: String
     var totalTime: Int
@@ -11,6 +13,7 @@ struct SimplePresentation: Codable,Equatable {
     var events: [SimpleEvents]
     
     init(title: String, descript: String, totalTime: Int, haptics: Bool, events: [SimpleEvents]) {
+       
         self.title = title
         self.descript = descript
         self.totalTime = totalTime

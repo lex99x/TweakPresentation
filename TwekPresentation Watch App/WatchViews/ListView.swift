@@ -13,10 +13,20 @@ struct ListView: View {
     @StateObject var counter = Counter()
 
     var body: some View {
-        List(Decode(data: counter.count)) {
-            Text("ola")
+        if Decode(data: counter.count) == []{
+            Text("Crie uma apresentacao no watch e toque aqui")
         }
-           
+        else{
+            List(Decode(data: counter.count)) { apresentacao in
+                Text(apresentacao.title)
+            }
+            //        Text("ola")
+            //            .onTapGesture {
+            //                print(Decode(data: counter.count))
+            //            }
+            
+            
+        }
     }
         
     
@@ -27,3 +37,7 @@ struct ListView_Previews: PreviewProvider {
         ListView()
     }
 }
+
+
+
+
