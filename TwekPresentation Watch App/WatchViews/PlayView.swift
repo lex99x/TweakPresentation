@@ -2,7 +2,6 @@
 import SwiftUI
 
 struct PlayView: View {
-    @StateObject var counter = Counter()
 
     @State var timeRemaining = 3
     @State var contando = false
@@ -14,7 +13,8 @@ struct PlayView: View {
         NavigationView{
             ZStack{
                 VStack{
-                    Text("\(counter.count)")
+                  
+                    Text("\(presentation[0].title)")
                         .font(.system(size:17))
                         .offset(y:5)
                         .padding()

@@ -2,6 +2,8 @@ import Foundation
 import RealmSwift
 
 struct SimplePresentation: Codable,Equatable {
+   
+    
     var title: String
     var descript: String
     var totalTime: Int
@@ -42,4 +44,10 @@ func PresentationToSimplePresentation(apresentacoes: [Presentation]) -> [SimpleP
     return vetorSimplePresentation
 }
 
+func Encode<T: Encodable>(payload: T) -> Data {
+    
+    let encoder = JSONEncoder()
+    let jsonData = try! JSONEncoder().encode(payload)
+    return jsonData
+}
 

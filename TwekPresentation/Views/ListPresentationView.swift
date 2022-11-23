@@ -51,8 +51,7 @@ struct ListPresentationView: View {
                     .scrollContentBackground(.hidden)
                     .refreshable {
                         ListaDeApresentacoes = Array(Presentation.readAll())
-                        var listaEncodada = Encode(payload: PresentationToSimplePresentation(apresentacoes: ListaDeApresentacoes))
-
+                        counter.increment()
                         
                     }
                     .padding(.top,2)

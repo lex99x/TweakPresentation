@@ -48,6 +48,7 @@
 		51A1D4C2292DCA15006F9301 /* PresentationWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C0292DCA15006F9301 /* PresentationWithoutRealm.swift */; };
 		51A1D4C4292DCA23006F9301 /* EventWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */; };
 		51A1D4C5292DCA23006F9301 /* EventWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */; };
+		51A1D4CB292DEAF6006F9301 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4CA292DEAF6006F9301 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		51A1D4BE292DC58E006F9301 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		51A1D4C0292DCA15006F9301 /* PresentationWithoutRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationWithoutRealm.swift; sourceTree = "<group>"; };
 		51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWithoutRealm.swift; sourceTree = "<group>"; };
+		51A1D4CA292DEAF6006F9301 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				51A1D4A8292D99BA006F9301 /* ManualPresentationView.swift */,
+				51A1D4CA292DEAF6006F9301 /* ListView.swift */,
 				51A1D4AA292D99C4006F9301 /* PlayView.swift */,
 				51A1D4AC292D99D0006F9301 /* TimerView.swift */,
 				51A1D4AE292D99E2006F9301 /* EventCard.swift */,
@@ -382,6 +385,7 @@
 				51A1D477292D91D9006F9301 /* Counter.swift in Sources */,
 				51A1D474292D91AC006F9301 /* SessionDelegate.swift in Sources */,
 				51A1D4A9292D99BA006F9301 /* ManualPresentationView.swift in Sources */,
+				51A1D4CB292DEAF6006F9301 /* ListView.swift in Sources */,
 				51A1D47A292D9205006F9301 /* Presentation.swift in Sources */,
 				51A1D4B3292D99FF006F9301 /* QuitView.swift in Sources */,
 				51A1D45B292D910E006F9301 /* TwekPresentationApp.swift in Sources */,

@@ -3,6 +3,7 @@ import RealmSwift
 
 struct SimpleEvents: Codable,Equatable {
     
+    
     var eventTitle: String
     var eventDescription: String
     var memoryTriggersLabel: String
@@ -47,4 +48,11 @@ func EventsToSimpleEvents(VetorDeEventos: List<Event>) -> [SimpleEvents] {
     return VetorSimpleEvents
     
 }
+func Decode(data: Data) -> [SimplePresentation]{
+    let decoder = JSONDecoder()
+    let sameEmployee = try? decoder.decode([SimplePresentation].self, from: data)
+    guard let sameEmployee = sameEmployee else { return [] }
+    return sameEmployee
+}
+
 
