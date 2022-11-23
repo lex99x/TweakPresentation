@@ -30,7 +30,7 @@ struct EventCard: View {
                 }
             }
             HStack{
-                Text(evento.memoryTriggersLabel)
+                Text(evento.eventDescription)
                     .scenePadding()
             }
         }
