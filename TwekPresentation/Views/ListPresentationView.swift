@@ -65,8 +65,3 @@ struct ListPresentationView_Previews: PreviewProvider {
 }
 
 
-
-//
-////                        print(Encode(payload: PresentationToSimplePresentation(apresentacoes: ListaDeApresentacoes)))
-//                        var listaDescondada = Decode(data: listaEncodada)
-//                        print(listaDescondada)
