@@ -19,10 +19,10 @@ struct ListPresentationView: View {
                     List(ListaDeApresentacoes){ apresentacao in
                         NavigationLink(destination: ListEventsView(presentation: apresentacao), label: {
                             ListCardView(apresentacao: apresentacao)
-                                .listRowBackground(Color(.CorFundoCard))
                         })
-                          
+                        .listRowBackground(Color(.CorFundoCard))
                     }
+                
                     .scrollContentBackground(.hidden)
                     .refreshable {
                         ListaDeApresentacoes = Array(Presentation.readAll())

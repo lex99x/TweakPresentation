@@ -48,6 +48,7 @@
 		51A1D4C4292DCA23006F9301 /* EventWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */; };
 		51A1D4C5292DCA23006F9301 /* EventWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */; };
 		51A1D4CB292DEAF6006F9301 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4CA292DEAF6006F9301 /* ListView.swift */; };
+		9867E33D2934FB2400923E4C /* PlaceholderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9867E33C2934FB2400923E4C /* PlaceholderColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		51A1D4C0292DCA15006F9301 /* PresentationWithoutRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationWithoutRealm.swift; sourceTree = "<group>"; };
 		51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWithoutRealm.swift; sourceTree = "<group>"; };
 		51A1D4CA292DEAF6006F9301 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		9867E33C2934FB2400923E4C /* PlaceholderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				51A1D496292D92E6006F9301 /* UIColor+getColor.swift */,
+				9867E33C2934FB2400923E4C /* PlaceholderColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				51A1D494292D92CA006F9301 /* EventCardView.swift in Sources */,
 				51A1D497292D92E6006F9301 /* UIColor+getColor.swift in Sources */,
 				51A1D479292D9205006F9301 /* Presentation.swift in Sources */,
+				9867E33D2934FB2400923E4C /* PlaceholderColor.swift in Sources */,
 				51A1D449292D910C006F9301 /* TwekPresentationApp.swift in Sources */,
 				51A1D4C1292DCA15006F9301 /* PresentationWithoutRealm.swift in Sources */,
 				51A1D49A292D9309006F9301 /* SecondsTransformationFunc.swift in Sources */,
@@ -598,7 +602,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -637,7 +641,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
