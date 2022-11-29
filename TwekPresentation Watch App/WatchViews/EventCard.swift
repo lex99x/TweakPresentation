@@ -3,42 +3,43 @@ import SwiftUI
 
 struct EventCard: View {
     
-    var evento: SimpleEvents
+    @State var evento: SimpleEvents
     @State var start = Date()
     
+    @State var progress = 0.0
+    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
-       
-       
         ZStack{
-            Color(. CorFundoCard)
+            Color(.CorFundoCard)
                 .cornerRadius(6)
-            VStack(spacing:0){
-                Color(. CorPadraoCard)
+            VStack(spacing: 0){
+                Color(.CorPadraoCard)
                     .cornerRadius(6)
                     .padding()
                 HStack{
-                    ProgressView(timerInterval:start...start.addingTimeInterval (evento.eventDuration), countsDown: false){
-                        //Titulo do evento
-                    } currentValueLabel: {
-                        
-                        //Range do evento
-                    }
-                    .tint(Color(.RoxoWatch))
-                    .onAppear(){
-                        start = Date()
-                    }
+                    ProgressView(value: progress, total: evento.eventDuration)
+                        .tint(Color(.RoxoWatch))
+                        .onReceive(timer) { _ in
+                            if progress < evento.eventDuration {
+                                progress += 0.1
+                            } else if progress >= evento.eventDuration {
+                                timer.upstream.connect().cancel()
+                                WKInterfaceDevice.current().play(.stop)
+                            }
+                        }
+                }
+                HStack{
+                    Text(evento.eventDescription)
+                        .scenePadding()
                 }
             }
-            HStack{
-                Text(evento.eventDescription)
-                    .scenePadding()
-            }
         }
-        
-        
+        .onAppear(perform: {
+            print(evento)
+        })
     }
 }
-
 
 struct EventCardShow: View {
     var apresentacao : SimplePresentation
@@ -55,14 +56,5 @@ struct EventCardShow: View {
             }
             .tabViewStyle(.carousel)
         }
-        
     }
 }
-
-
-
-
-
-
-
-
