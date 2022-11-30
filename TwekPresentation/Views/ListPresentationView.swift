@@ -25,7 +25,7 @@ struct ListPresentationView: View {
                         .foregroundColor(Color(.DarkText2))
                         .multilineTextAlignment(.center)
                 }
-                .padding(8)
+                .padding(0)
                 .background(.opacity(0))
                 
                 List(ListaDeApresentacoes) { apresentacao in
@@ -44,11 +44,14 @@ struct ListPresentationView: View {
                     .listRowBackground(Color(.DarkFundoIphone))
                     .listRowSeparator(.hidden)
                 }
+                .listStyle(PlainListStyle())
+                .padding(16)
                 .scrollContentBackground(.hidden)
                 .refreshable {
                     ListaDeApresentacoes = Array(Presentation.readAll())
                     counter.increment()
                 }
+                .ignoresSafeArea()
                 .navigationTitle("Presentations")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
