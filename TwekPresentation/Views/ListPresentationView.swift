@@ -30,7 +30,7 @@ struct ListPresentationView: View {
                 
                 List(ListaDeApresentacoes) { apresentacao in
                     ZStack {
-                        NavigationLink(destination: ListEventsView(presentation: apresentacao), label: { })
+                        NavigationLink(destination: ListOfEventsView(presentation: apresentacao), label: { })
                             .buttonStyle(PlainButtonStyle())
                             .opacity(0)
 
