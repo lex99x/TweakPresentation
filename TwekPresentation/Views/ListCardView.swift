@@ -11,16 +11,24 @@ struct ListCardView: View {
     var apresentacao : Presentation
     
     var body: some View {
-            VStack(alignment: .leading,spacing: 8){
-                Text(apresentacao.title)
-                    .font(.system(size: 17))
-                    .bold()
-                    .foregroundColor(Color(.DarkText1))
-                Text(apresentacao.descript)
-                    .font(.system(size: 17))
-                    .foregroundColor(Color(.DarkText1))
-                HStack(spacing: 0){
-                    Image(systemName: "applewatch.radiowaves.left.and.right")
+        VStack(alignment: .leading,spacing: 4){
+            Text(apresentacao.title)
+                .font(.body)
+                .bold()
+                .foregroundColor(Color(.DarkText1))
+            
+            Text(apresentacao.descript)
+                .font(.body)
+                .foregroundColor(Color(.DarkText1))
+            
+            HStack(spacing: 4){
+                Image(systemName: "applewatch.radiowaves.left.and.right")
+                    .font(.subheadline)
+                    .foregroundColor(Color(.DarkText2))
+                
+                if apresentacao.haptics == true{
+                    Text("Haptics on Apple Watch enabled")
+                        .font(.subheadline)
                         .foregroundColor(Color(.DarkText2))
                     
                     if apresentacao.haptics == true{
@@ -34,22 +42,37 @@ struct ListCardView: View {
                             .foregroundColor(Color(.DarkText2))
                     }
                 }
-                HStack(spacing: 8){
-                    Text("\(secondsToMinutesSeconds(apresentacao.totalTime))")
-                        .font(.system(size: 15))
-                        .foregroundColor(Color(.DarkText1))
-                        .padding(7)
-                        .background(Color(.CorPadraoCard))
-                        .clipShape(Capsule())
-                    
-                    Text("\(apresentacao.events.count) Events ")
-                        .font(.system(size: 15))
-                        .foregroundColor(Color(.DarkText1))
-                        .padding(7)
-                        .background(Color(.CorPadraoCard))
-                        .clipShape(Capsule())
+                else{
+                    Text("Haptics on Apple Watch disabled")
+                        .font(.subheadline)
+                        .foregroundColor(Color(.DarkText2))
                 }
+                Spacer()
+            }.padding(.bottom,8)
+            
+            HStack(spacing: 8){
+                Text("\(secondsToMinutesSeconds(apresentacao.totalTime))")
+                    .font(.subheadline)
+                    .foregroundColor(Color(.DarkText1))
+                    .padding(.top,6)
+                    .padding(.leading,12)
+                    .padding(.bottom,6)
+                    .padding(.trailing,12)
+                    .background(Color(.CorPadraoCard))
+                    .clipShape(Capsule())
+                
+                Text("\(apresentacao.events.count) Events")
+                    .font(.subheadline)
+                    .foregroundColor(Color(.DarkText1))
+                    .padding(.top,6)
+                    .padding(.leading,12)
+                    .padding(.bottom,6)
+                    .padding(.trailing,12)
+                    .background(Color(.CorPadraoCard))
+                    .clipShape(Capsule())
             }
+        }
+        .padding()
     }
 }
 
