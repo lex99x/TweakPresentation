@@ -9,35 +9,39 @@ import SwiftUI
 
 struct ManualPresentationView: View {
     
-    @State var presentation : SimplePresentation
-//    @State private var showingSheet = false
+    @State var presentation: SimplePresentation
+    @State var showingSheet = false
     
     var body: some View {
-        
-//        let longPressGesture = LongPressGesture()
-//            .onEnded({value in
-//                showingSheet = true
-//            })
-        NavigationView{
+        NavigationView {
             VStack {
                 TimerView(presentation: presentation)
-//                    .gesture(longPressGesture)
-//                    .sheet(isPresented: $showingSheet) {
-//                        ActionsView()
-//                            .navigationBarHidden(true)
-//                    }
                 EventCardShow(apresentacao: presentation)
             }
         }
-      
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+                Button(action: {
+                    showingSheet.toggle()
+                }, label: {
+                    HStack {
+                        Image(systemName: "chevron.backward.circle.fill")
+                            .foregroundColor(Color(.RoxoWatch))
+                    }
+                })
+           }
+        }
+        .sheet(isPresented: $showingSheet) {
+            QuitView()
+        }
         
     }
     
 }
-//
+    
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ManualPresentationView()
 //    }
 //}
-

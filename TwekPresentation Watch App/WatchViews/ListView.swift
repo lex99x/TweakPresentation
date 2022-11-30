@@ -15,13 +15,12 @@ struct ListView: View {
     var body: some View {
         NavigationView{
             VStack{
-                var apresentacoes = Decode(data: counter.count)
+                let apresentacoes = Decode(data: counter.count)
                 List(apresentacoes) { apresentacao in
                     
                     NavigationLink(destination: PlayView(presentation :apresentacao), label: {
                         Text(apresentacao.title)
                     })
-                  
                     
                 }
                 .scrollContentBackground(.hidden)
@@ -38,20 +37,13 @@ struct ListView: View {
                 
             }
         }
-        
-        
+        .navigationBarBackButtonHidden()
     }
 }
-
-
-
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
         ListView()
     }
 }
-
-
-
 
