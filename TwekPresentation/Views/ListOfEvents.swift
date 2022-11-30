@@ -13,7 +13,6 @@ struct ListOfEventsView: View {
     var presentation: Presentation
     
     @State private var showingSheet = false
-    
     var body: some View {
         ZStack{
             Color(.DarkFundoIphone).edgesIgnoringSafeArea(.all)
@@ -50,22 +49,21 @@ struct ListOfEventsView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(.gray, lineWidth: 1)
                 )
-                List {
-                    ForEach(presentation.events){ eventos in
-                        VStack(alignment: .leading){
-                            EventCard(event: eventos)
-                        }
-                    }
+                List(Array(presentation.events)) { event in
+                    
                    
-                    .listRowBackground(Color(.CorFundoCard))
+                   EventCard(event: event)
+                 
+                        .listRowBackground(Color(.CorFundoCard))
+                        .listRowSeparator(.hidden)
                 }
                 .scrollContentBackground(.hidden)
-               
+                
             }
             .sheet(isPresented: $showingSheet, content: {
                 CreateEventModal(presentation: presentation)
             })
-
+            
             .padding(.leading,16)
             .padding(.top,15)
             .navigationTitle(Text(presentation.title))
@@ -81,6 +79,8 @@ struct ListOfEventsView: View {
             
         }
     }
+    
+ 
     
     struct ListOfEventsView_Previews: PreviewProvider {
         static var previews: some View {
