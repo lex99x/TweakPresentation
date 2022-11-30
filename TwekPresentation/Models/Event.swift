@@ -34,7 +34,7 @@ class Event: Object, Identifiable {
     }
     
     func calcDuration() {
-        eventDuration = Double(endTimeSeg - startTimeSeg)
+        eventDuration = Double(startTimeSeg)
     }
     
     func save(presentation: Presentation) {
