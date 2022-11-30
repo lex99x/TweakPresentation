@@ -9,7 +9,7 @@ struct EventCard: View {
     @State var isHapticsPresentation: Bool
     
     @State var progress = 0.0
-    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ZStack{
@@ -41,10 +41,13 @@ struct EventCard: View {
         }
         .onAppear(perform: {
             print(evento)
+            timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
         })
         .onDisappear(perform: {
             timer.upstream.connect().cancel()
+            progress = 0.0
         })
+        
     }
 }
 
