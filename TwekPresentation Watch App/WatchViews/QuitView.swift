@@ -12,6 +12,8 @@ struct QuitView: View {
     @Environment(\.dismiss) var dismiss
     @State var leave = false
     
+    @State var presentation: SimplePresentation
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -33,7 +35,7 @@ struct QuitView: View {
                         leave.toggle()
                     }
                     .background {
-                        NavigationLink(destination: ListView(), isActive: $leave) {
+                        NavigationLink(destination: PlayView(presentation: presentation), isActive: $leave) {
                             EmptyView()
                         }
                     }
@@ -49,8 +51,8 @@ struct QuitView: View {
     }
 }
 
-struct QuitView_Previews: PreviewProvider {
-    static var previews: some View {
-        QuitView()
-    }
-}
+//struct QuitView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        QuitView()
+//    }
+//}

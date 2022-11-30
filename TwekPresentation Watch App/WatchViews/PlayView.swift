@@ -8,6 +8,8 @@ struct PlayView: View {
     @State var jump = false
     @State var presentation: SimplePresentation
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    @State var showingSheet = false
    
     var body: some View {
         
@@ -81,7 +83,6 @@ struct PlayView: View {
                                         timer.upstream.connect().cancel()
                                     }
                                 }
-                            
                         }
                         
                     }
@@ -92,6 +93,27 @@ struct PlayView: View {
                     }
                 }
             }
+        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+
+                if jump {
+
+                    Button(action: {
+                        showingSheet.toggle()
+                    }, label: {
+                        HStack {
+                            Image(systemName: "chevron.backward.circle.fill")
+                                .foregroundColor(Color(.RoxoWatch))
+                        }
+                    })
+
+                }
+           }
+        }
+        .sheet(isPresented: $showingSheet) {
+            QuitView(presentation: presentation)
         }
     }
     

@@ -13,20 +13,17 @@ struct ListView: View {
     @StateObject var counter = Counter()
     
     var body: some View {
-        NavigationView{
-            VStack{
+        NavigationView {
+            VStack {
                 let apresentacoes = Decode(data: counter.count)
                 List(apresentacoes) { apresentacao in
-                    
                     NavigationLink(destination: PlayView(presentation :apresentacao), label: {
                         Text(apresentacao.title)
                     })
-                    
                 }
                 .scrollContentBackground(.hidden)
-               
                 if apresentacoes == [] {
-                    HStack{
+                    HStack {
                         Image(systemName: "arrow.clockwise")
                         Text("Refresh in your iphone")
                             .font(.system(size: 12))
@@ -34,7 +31,6 @@ struct ListView: View {
                             .multilineTextAlignment(.center)
                     }
                 }
-                
             }
         }
         .navigationBarBackButtonHidden()

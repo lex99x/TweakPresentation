@@ -10,8 +10,7 @@ import SwiftUI
 struct ManualPresentationView: View {
     
     @State var presentation: SimplePresentation
-    @State var showingSheet = false
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -19,27 +18,10 @@ struct ManualPresentationView: View {
                 EventCardShow(apresentacao: presentation)
             }
         }
-        .navigationBarBackButtonHidden()
-        .toolbar {
-            ToolbarItem(placement: .cancellationAction) {
-                Button(action: {
-                    showingSheet.toggle()
-                }, label: {
-                    HStack {
-                        Image(systemName: "chevron.backward.circle.fill")
-                            .foregroundColor(Color(.RoxoWatch))
-                    }
-                })
-           }
-        }
-        .sheet(isPresented: $showingSheet) {
-            QuitView()
-        }
-        
     }
     
 }
-    
+
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ManualPresentationView()
