@@ -29,12 +29,16 @@ struct CreateEventModal: View {
         NavigationView {
             VStack {
                 Form {
-                    Section(header: Text("Event details") .foregroundColor(Color(.DarkText2))) {
+                    Section(header: Text("Event details")
+                        .foregroundColor(Color(.DarkText2))) {
                         
                         TextField("Title", text: $event.eventTitle)
-                            .foregroundColor(Color(.DarkText1))
+                                .foregroundColor(Color(.DarkText1))
+                                .font(.body)
+                        
                         TextField("Memory Trigger", text: $event.eventDescription)
-                            .foregroundColor(Color(.DarkText1))
+                                .foregroundColor(Color(.DarkText1))
+                                .font(.body)
                         
                         HStack {
                             Text("Starts at")
@@ -50,8 +54,7 @@ struct CreateEventModal: View {
                                 Color(.CorPadraoCard)
                             }
                             .cornerRadius(8)
-                            .foregroundColor(showStartPicker ? Color(.RoxoWatch) : Color(.white))
-                            
+                            .foregroundColor(showStartPicker ? Color(.RoxoWatch) : Color(.DarkText1))
                         }
                         .foregroundColor(Color(.DarkText1))
                         
@@ -81,9 +84,10 @@ struct CreateEventModal: View {
                                     }
                                 }
                                 .pickerStyle(.wheel)
-                                Text("seg")
+                                Text("sec")
                                 
                             }
+                            .foregroundColor(Color(.DarkText1))
                             .frame(height: 50)
                             
                         }
@@ -102,7 +106,8 @@ struct CreateEventModal: View {
                                 Color(.CorPadraoCard)
                             }
                             .cornerRadius(8)
-                            .foregroundColor(showEndPicker ? Color(.RoxoWatch) : Color(.white))
+                            .foregroundColor(showEndPicker ? Color(.RoxoWatch) : Color(.DarkText1))
+                            
                         }
                         .foregroundColor(Color(.DarkText1))
                         
@@ -115,14 +120,18 @@ struct CreateEventModal: View {
                                         Text("\(hour)")
                                     }
                                 }
+                                .foregroundColor(Color(.DarkText1))
                                 .pickerStyle(.wheel)
-                                Text("hours")
+                                Text("hours")                                .foregroundColor(Color(.DarkText1))
+
                                 
                                 Picker("", selection: $selectedEndTime.minute) {
                                     ForEach(0...59, id: \.self) { minute in
                                         Text("\(minute)")
                                     }
                                 }
+                                .foregroundColor(Color(.DarkText1))
+
                                 .pickerStyle(.wheel)
                                 Text("min")
                                 
@@ -131,12 +140,12 @@ struct CreateEventModal: View {
                                         Text("\(second)")
                                     }
                                 }
+                                .foregroundColor(Color(.DarkText1))
                                 .pickerStyle(.wheel)
-                                Text("sec")
-                                
+                                Text("sec")                                .foregroundColor(Color(.DarkText1))
                             }
+                            .foregroundColor(Color(.DarkText1))
                             .frame(height: 50)
-                            
                         }
                         
                     }
