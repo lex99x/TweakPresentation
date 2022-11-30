@@ -24,16 +24,17 @@ struct EventCard: View {
                         .font(.system(size: 17))
                         .foregroundColor(Color(.DarkText1))
                     Text("Duration: \(secondsToMinutesSecondsWithText(Int(event.eventDuration)))")
-                        .font(.system(size: 12))
+                        .font(.footnote)
                         .foregroundColor(Color(.DarkText2))
                         
                 }
-                Spacer()
+                Spacer(minLength: 30)
                 
              
                 Text(event.eventDescription)
-                    .font(.system(size: 12))
-                    .padding(3)
+                    .frame(width: 100, height: 50, alignment: .center)
+                    .font(.subheadline)
+                    .padding(8)
                     .background(Color(.CorPadraoCard))
                     .cornerRadius(5)
                     .multilineTextAlignment(.center)
@@ -41,7 +42,7 @@ struct EventCard: View {
                     
                     
             }
-            .padding()
+            .padding(8)
            
            
            
