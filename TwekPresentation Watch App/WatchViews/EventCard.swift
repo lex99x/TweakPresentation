@@ -42,6 +42,9 @@ struct EventCard: View {
         .onAppear(perform: {
             print(evento)
         })
+        .onDisappear(perform: {
+            timer.upstream.connect().cancel()
+        })
     }
 }
 
