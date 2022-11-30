@@ -10,37 +10,42 @@ import SwiftUI
 struct QuitView: View {
     
     @Environment(\.dismiss) var dismiss
+    @State var leave = false
     
     var body: some View {
-        
-        ScrollView {
-            
-            VStack {
-                Text("Abandon practice?")
-                    .font(.headline)
-                    .fontWeight(.medium)
+        NavigationView {
+            ScrollView {
+                VStack {
+                    Text("Leave practice?")
+                        .font(.headline)
+                        .fontWeight(.medium)
+                    
+                    Text("If you leave now, you will have to start again next time.")
+                        .fixedSize(horizontal: false, vertical: true)
+                        .multilineTextAlignment(.center)
+                        .font(.headline)
+                        .fontWeight(.regular)
+                        .padding(.top, 5)
+                }
                 
-                Text("If you leave now, you will have to start again next time.")
-                    .fixedSize(horizontal: false, vertical: true)
-                    .multilineTextAlignment(.center)
-                    .font(.headline)
-                    .fontWeight(.regular)
-                    .padding(.top, 5)
-            }
-            
-            VStack {
-                Button("Abandon") {
-                    print("Abandonando apresentação...")
+                VStack {
+                    Button("Leave") {
+                        leave.toggle()
+                    }
+                    .background {
+                        NavigationLink(destination: ListView(), isActive: $leave) {
+                            EmptyView()
+                        }
+                    }
+                    .foregroundColor(.red)
+                    Button("Cancel") {
+                        print("Cancelando...")
+                        dismiss()
+                    }
                 }
-                Button("Cancel") {
-                    print("Cancelando...")
-                    dismiss()
-                }
+                .padding(.top, 5)
             }
-            .padding(.top, 5)
-            
         }
-        
     }
 }
 
