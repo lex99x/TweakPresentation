@@ -65,24 +65,23 @@ struct CreatePresentationModal: View {
                             .pickerStyle(.wheel)
                             Text("sec")
                         }
+                        .foregroundColor(Color(.DarkText1))
                         .frame(height: 50)
                         
                     }
                     
-                }
-                .listRowBackground(Color(.CorFundoTextFieldsBo3))
+                }.listRowBackground(Color(.DarkBG3))
                 
                 Section(header: Text("Preferences"),
-                        footer: Text("Haptics feedbacks are triggered at the end of each event while practicing your presentation using Apple Watch.")
-                                    .font(.system(size: 11))) {
+                        footer: Text("Haptics feedbacks happen at the end of each event while practicing with your Apple Watch.")
+                                    .font(.footnote)) {
                     
                     Toggle(isOn: $presentation.haptics) {
                         Text("Haptics feedback")
                     }
                     .tint(Color(.RoxoWatch))
                     
-                }.listRowBackground(Color(.CorFundoTextFieldsBo3))
-                
+                }.listRowBackground(Color(.DarkBG3))
             }
             .scrollContentBackground(.hidden)
             .background(Color(.CorFundoCard))
