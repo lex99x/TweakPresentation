@@ -18,13 +18,15 @@ struct CreatePresentationModal: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Presentation Details")) {
+                Section(header: Text("Presentation Details").foregroundColor(Color(.DarkText2))) {
                     
                     TextField("Title", text: $presentation.title)
+                    
                     TextField("Description (optional)", text: $presentation.descript)
                     
                     HStack {
                         Text("Duration")
+                            .foregroundColor(Color(.DarkText1))
                         Spacer()
                         Button(formatDayTime(hour: selectedDuration.hour,
                                              minute: selectedDuration.minute,
@@ -72,12 +74,15 @@ struct CreatePresentationModal: View {
                 }
                 .listRowBackground(Color(.CorFundoTextFieldsBo3))
                 
-                Section(header: Text("Preferences"),
-                        footer: Text("Haptics feedbacks are triggered at the end of each event while practicing your presentation using Apple Watch.")
-                                    .font(.system(size: 11))) {
+                Section(header: Text("Preferences")
+                    .foregroundColor(Color(.DarkText2)),
+                        footer: Text("Haptics feedbacks are triggered at the end of each event while practicing with your Apple Watch.")
+                    .foregroundColor(Color(.DarkText2))
+                    .font(.footnote)) {
                     
                     Toggle(isOn: $presentation.haptics) {
                         Text("Haptics feedback")
+                            .foregroundColor(Color(.DarkText1))
                     }
                     .tint(Color(.RoxoWatch))
                     

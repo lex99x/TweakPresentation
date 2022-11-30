@@ -29,10 +29,12 @@ struct CreateEventModal: View {
         NavigationView {
             VStack {
                 Form {
-                    Section(header: Text("Event details")) {
+                    Section(header: Text("Event details") .foregroundColor(Color(.DarkText2))) {
                         
                         TextField("Title", text: $event.eventTitle)
+                            .foregroundColor(Color(.DarkText1))
                         TextField("Memory Trigger", text: $event.eventDescription)
+                            .foregroundColor(Color(.DarkText1))
                         
                         HStack {
                             Text("Starts at")
