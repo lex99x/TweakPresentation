@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		17664FC8292DAFDC00441630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A1D44C292D910E006F9301 /* Assets.xcassets */; };
+		5148846129363E800096682F /* ListOfEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148846029363E800096682F /* ListOfEvents.swift */; };
+		514884652936409C0096682F /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514884642936409C0096682F /* EventCard.swift */; };
 		51A1D449292D910C006F9301 /* TwekPresentationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D448292D910C006F9301 /* TwekPresentationApp.swift */; };
 		51A1D44D292D910E006F9301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A1D44C292D910E006F9301 /* Assets.xcassets */; };
 		51A1D456292D910E006F9301 /* Tweak.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 51A1D455292D910E006F9301 /* Tweak.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -76,6 +78,8 @@
 
 /* Begin PBXFileReference section */
 		174E2995292DA7BB002E100A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5148846029363E800096682F /* ListOfEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfEvents.swift; sourceTree = "<group>"; };
+		514884642936409C0096682F /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
 		51A1D445292D910C006F9301 /* TwekPresentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwekPresentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A1D448292D910C006F9301 /* TwekPresentationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwekPresentationApp.swift; sourceTree = "<group>"; };
 		51A1D44C292D910E006F9301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 				51A1D484292D926B006F9301 /* CreatePresentationModal.swift */,
 				51A1D48A292D9291006F9301 /* ListEventsView.swift */,
 				51A1D48D292D92A4006F9301 /* ListCardView.swift */,
+				514884642936409C0096682F /* EventCard.swift */,
+				5148846029363E800096682F /* ListOfEvents.swift */,
 				51A1D490292D92BB006F9301 /* CreateEventModal.swift */,
 				51A1D493292D92CA006F9301 /* EventCardView.swift */,
 			);
@@ -360,6 +366,7 @@
 				51A1D476292D91D9006F9301 /* Counter.swift in Sources */,
 				51A1D485292D926B006F9301 /* CreatePresentationModal.swift in Sources */,
 				51A1D491292D92BB006F9301 /* CreateEventModal.swift in Sources */,
+				5148846129363E800096682F /* ListOfEvents.swift in Sources */,
 				51A1D4C4292DCA23006F9301 /* EventWithoutRealm.swift in Sources */,
 				51A1D473292D91AC006F9301 /* SessionDelegate.swift in Sources */,
 				51A1D494292D92CA006F9301 /* EventCardView.swift in Sources */,
@@ -370,6 +377,7 @@
 				51A1D49A292D9309006F9301 /* SecondsTransformationFunc.swift in Sources */,
 				51A1D47F292D921A006F9301 /* Event.swift in Sources */,
 				51A1D48E292D92A4006F9301 /* ListCardView.swift in Sources */,
+				514884652936409C0096682F /* EventCard.swift in Sources */,
 				51A1D47C292D920F006F9301 /* DayTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,7 +606,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -637,7 +645,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
