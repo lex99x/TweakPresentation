@@ -13,6 +13,8 @@ struct ListOfEventsView: View {
     var presentation: Presentation
     @State var eventos = [Event()]
     @State private var showingSheet = false
+    @Environment(\.editMode) private var editMode
+
     var body: some View {
         ZStack{
             Color(.DarkFundoIphone).edgesIgnoringSafeArea(.all)
@@ -68,7 +70,8 @@ struct ListOfEventsView: View {
                         .onMove(perform: move)
                     }
                     .refreshable(action: {
-                        Presentation.updateEvents(presentation: presentation, newEvents: eventos)
+                        eventos = Array(presentation.events)
+                        let _ = print(eventos)
                     })
                     
                     .scrollContentBackground(.hidden)
@@ -76,14 +79,9 @@ struct ListOfEventsView: View {
                     .listStyle(PlainListStyle())
                     .padding(16)
                 }
-                
-                
-                
-                
+         
             }
-            
-            
-            
+          
             .sheet(isPresented: $showingSheet, content: {
                 CreateEventModal(presentation: presentation)
             })
@@ -99,6 +97,13 @@ struct ListOfEventsView: View {
                 })
                 EditButton()
             }
+            .onChange(of: editMode!.wrappedValue, perform: { value in
+              if value.isEditing {
+                  let _ = print("pressEdit!")
+              } else {
+                  Presentation.updateEvents(presentation: presentation, newEvents: eventos)
+              }
+            })
             
         }
         .onAppear(){
@@ -106,7 +111,6 @@ struct ListOfEventsView: View {
             let _ = print(eventos)
         }
         
-       
     }
     
     func move(from source: IndexSet, to destination: Int) {
