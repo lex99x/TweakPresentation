@@ -4,7 +4,7 @@ struct TimerView: View {
     //variaveis
     var timerColor:Color {
         if mainTimer > presentation.totalTime { return Color(.Vermelho)}
-        else if mainTimer >= presentation.totalTime - 120 && mainTimer <= presentation.totalTime{ return Color(.Vermelho)}
+        else if mainTimer >= presentation.totalTime - 120 && mainTimer <= presentation.totalTime{ return Color(.Amarelo)}
         else { return Color(.DarkText1) }
     }
     

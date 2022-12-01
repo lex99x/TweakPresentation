@@ -13,7 +13,7 @@ struct EventCard: View {
     
     var body: some View {
         ZStack (alignment: .top){
-
+            
             Color(.CorFundoCard)
                 .cornerRadius(6)
             
@@ -29,21 +29,21 @@ struct EventCard: View {
                 .cornerRadius(5)
                 .multilineTextAlignment(.center)
                 .padding(4)
-                
-                ProgressView(value: progress, total: evento.eventDuration)
-                    .tint(Color(.RoxoWatch))
-                    .onReceive(timer) { _ in
-                        if progress < evento.eventDuration {
-                            progress += 0.1
-                        } else if progress >= evento.eventDuration {
-                            timer.upstream.connect().cancel()
-                            if isHapticsPresentation {
-                                WKInterfaceDevice.current().play(.stop)
+                if evento.eventDuration > 0{
+                    ProgressView(value: progress, total: evento.eventDuration)
+                        .tint(Color(.RoxoWatch))
+                        .onReceive(timer) { _ in
+                            if progress < evento.eventDuration {
+                                progress += 0.1
+                            } else if progress >= evento.eventDuration {
+                                timer.upstream.connect().cancel()
+                                if isHapticsPresentation {
+                                    WKInterfaceDevice.current().play(.stop)
+                                }
                             }
                         }
-                    }
-                
-                }.padding(4)
+                }
+            }.padding(4)
         }
         .onAppear(perform: {
             print(evento)
