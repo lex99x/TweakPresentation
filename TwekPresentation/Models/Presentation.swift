@@ -59,6 +59,16 @@ class Presentation: Object,Identifiable  {
         print(events)
     }
     
+    static func updateEvents(presentation:Presentation,newEvents:[Event]){
+        let realm = try! Realm()
+           try! realm.write {
+               presentation.events.removeAll()
+               presentation.events.append(objectsIn: newEvents)
+               
+               
+           }
+    }
+    
 }
 
 func getMockedPresentations() -> [Presentation]{

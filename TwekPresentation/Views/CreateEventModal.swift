@@ -41,7 +41,7 @@ struct CreateEventModal: View {
                                 .font(.body)
                         
                         HStack {
-                            Text("Starts at")
+                            Text("Duration")
                             Spacer()
                             Button(formatDayTime(hour: selectedStartTime.hour,
                                                  minute: selectedStartTime.minute,
@@ -92,79 +92,64 @@ struct CreateEventModal: View {
                             
                         }
                         
-                        HStack {
-                            Text("Ends at")
-                            Spacer()
-                            Button(formatDayTime(hour: selectedEndTime.hour,
-                                                 minute: selectedEndTime.minute,
-                                                 second: selectedEndTime.second)) {
-                                showEndPicker.toggle()
-                            }
-                            .padding(.horizontal, 12)
-                            .padding(.vertical, 8)
-                            .background {
-                                Color(.CorPadraoCard)
-                            }
-                            .cornerRadius(8)
-                            .foregroundColor(showEndPicker ? Color(.RoxoWatch) : Color(.DarkText1))
-                            
-                        }
-                        .foregroundColor(Color(.DarkText1))
-                        
-                        if showEndPicker {
-                            
-                            HStack {
-                                
-                                Picker("", selection: $selectedEndTime.hour) {
-                                    ForEach(0...23, id: \.self) { hour in
-                                        Text("\(hour)")
-                                    }
-                                }
-                                .foregroundColor(Color(.DarkText1))
-                                .pickerStyle(.wheel)
-                                Text("hours")                                .foregroundColor(Color(.DarkText1))
-
-                                
-                                Picker("", selection: $selectedEndTime.minute) {
-                                    ForEach(0...59, id: \.self) { minute in
-                                        Text("\(minute)")
-                                    }
-                                }
-                                .foregroundColor(Color(.DarkText1))
-
-                                .pickerStyle(.wheel)
-                                Text("min")
-                                
-                                Picker("", selection: $selectedEndTime.second) {
-                                    ForEach(0...59, id: \.self) { second in
-                                        Text("\(second)")
-                                    }
-                                }
-                                .foregroundColor(Color(.DarkText1))
-                                .pickerStyle(.wheel)
-                                Text("sec")                                .foregroundColor(Color(.DarkText1))
-                            }
-                            .foregroundColor(Color(.DarkText1))
-                            .frame(height: 50)
-                        }
-                        
+//                        HStack {
+//                            Text("Ends at")
+//                            Spacer()
+//                            Button(formatDayTime(hour: selectedEndTime.hour,
+//                                                 minute: selectedEndTime.minute,
+//                                                 second: selectedEndTime.second)) {
+//                                showEndPicker.toggle()
+//                            }
+//                            .padding(.horizontal, 12)
+//                            .padding(.vertical, 8)
+//                            .background {
+//                                Color(.CorPadraoCard)
+//                            }
+//                            .cornerRadius(8)
+//                            .foregroundColor(showEndPicker ? Color(.RoxoWatch) : Color(.DarkText1))
+//
+//                        }
+//                        .foregroundColor(Color(.DarkText1))
+//
+//                        if showEndPicker {
+//
+//                            HStack {
+//
+//                                Picker("", selection: $selectedEndTime.hour) {
+//                                    ForEach(0...23, id: \.self) { hour in
+//                                        Text("\(hour)")
+//                                    }
+//                                }
+//                                .foregroundColor(Color(.DarkText1))
+//                                .pickerStyle(.wheel)
+//                                Text("hours")                                .foregroundColor(Color(.DarkText1))
+//
+//
+//                                Picker("", selection: $selectedEndTime.minute) {
+//                                    ForEach(0...59, id: \.self) { minute in
+//                                        Text("\(minute)")
+//                                    }
+//                                }
+//                                .foregroundColor(Color(.DarkText1))
+//
+//                                .pickerStyle(.wheel)
+//                                Text("min")
+//
+//                                Picker("", selection: $selectedEndTime.second) {
+//                                    ForEach(0...59, id: \.self) { second in
+//                                        Text("\(second)")
+//                                    }
+//                                }
+//                                .foregroundColor(Color(.DarkText1))
+//                                .pickerStyle(.wheel)
+//                                Text("sec")                                .foregroundColor(Color(.DarkText1))
+//                            }
+//                            .foregroundColor(Color(.DarkText1))
+//                            .frame(height: 50)
+//                        }
+//
                     }
                     .listRowBackground(Color(.CorFundoTextFieldsBo3))
-//                    Section(header:
-//                                Text("Memory trigger"),
-//                            footer:
-//                                Text("Choose a memory trigger type to customize your event.")
-//                        .font(.system(size: 11))) {
-//                            
-////                            Picker("Type", selection: $selectedEventType) {
-////                                Text("None").tag(EventType.none)
-////                                Text("Keywords").tag(EventType.keywords)
-////                                Text("Color").tag(EventType.color)
-////                                Text("Image").tag(EventType.image)
-////                            }
-//                            
-//                        }
-//                        .listRowBackground(Color(.CorFundoTextFieldsBo3))
                 }
                 .scrollContentBackground(.hidden)
                 .background(

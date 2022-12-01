@@ -34,7 +34,7 @@ class Event: Object, Identifiable {
     }
     
     func calcDuration() {
-        eventDuration = Double(endTimeSeg - startTimeSeg)
+        eventDuration = Double(startTimeSeg)
     }
     
     func save(presentation: Presentation) {
@@ -46,6 +46,14 @@ class Event: Object, Identifiable {
         }
         
     }
+    
+    static func updateEvents(presentation:Presentation){
+        let realm = try! Realm()
+           try! realm.write {
+               presentation.events.removeAll()
+           }
+    }
+   
     
     static func readAll() -> Results<Event> {
         
