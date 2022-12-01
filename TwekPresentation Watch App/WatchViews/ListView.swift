@@ -13,27 +13,38 @@ struct ListView: View {
     @StateObject var counter = Counter()
     
     var body: some View {
+        
+        let apresentacoes = Decode(data: counter.count)
+
         NavigationView {
-            VStack {
-                let apresentacoes = Decode(data: counter.count)
-                List(apresentacoes) { apresentacao in
-                    NavigationLink(destination: PlayView(presentation :apresentacao), label: {
-                        Text(apresentacao.title)
-                    })
+            
+            if apresentacoes == [] {
+                HStack (alignment: .center, spacing: 4) {
+                    Image(systemName: "arrow.down")
+                        .font(.caption)
+                        .foregroundColor(Color(.DarkText2))
+                    Text("Refresh your iPhone list.")
+                        .font(.caption2)
+                        .foregroundColor(Color(.DarkText2))
+//                        .multilineTextAlignment(.center)
                 }
-                .scrollContentBackground(.hidden)
-                if apresentacoes == [] {
-                    HStack {
-                        Image(systemName: "arrow.clockwise")
-                        Text("Refresh in your iphone")
-                            .font(.system(size: 12))
-                            .foregroundColor(Color(.DarkText1))
-                            .multilineTextAlignment(.center)
+                .scenePadding()
+                .padding(.top,8)
+            } else {
+                VStack (alignment: .leading) {
+                    
+                    List(apresentacoes) { apresentacao in
+                        NavigationLink(destination: PlayView(presentation : apresentacao), label: {
+                            Text(apresentacao.title)
+                        })
+                        .listRowBackground(Color(.CorFundoCard).cornerRadius(8))
                     }
+                    .scrollContentBackground(.hidden)
                 }
             }
         }
         .navigationBarBackButtonHidden()
+      
     }
 }
 
