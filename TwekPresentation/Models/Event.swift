@@ -47,6 +47,14 @@ class Event: Object, Identifiable {
         
     }
     
+    static func updateEvents(presentation:Presentation){
+        let realm = try! Realm()
+           try! realm.write {
+               presentation.events.removeAll()
+           }
+    }
+   
+    
     static func readAll() -> Results<Event> {
         
         let realm = try! Realm()

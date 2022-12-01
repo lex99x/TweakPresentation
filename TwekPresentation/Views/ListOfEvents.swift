@@ -67,6 +67,9 @@ struct ListOfEventsView: View {
                         }
                         .onMove(perform: move)
                     }
+                    .refreshable(action: {
+                        Presentation.updateEvents(presentation: presentation, newEvents: eventos)
+                    })
                     
                     .scrollContentBackground(.hidden)
                     .ignoresSafeArea()
