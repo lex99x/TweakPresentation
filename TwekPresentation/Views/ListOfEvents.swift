@@ -71,7 +71,6 @@ struct ListOfEventsView: View {
                     }
                     .refreshable(action: {
                         eventos = Array(presentation.events)
-                        let _ = print(eventos)
                     })
                     
                     .scrollContentBackground(.hidden)
@@ -99,7 +98,7 @@ struct ListOfEventsView: View {
             }
             .onChange(of: editMode!.wrappedValue, perform: { value in
               if value.isEditing {
-                  let _ = print("pressEdit!")
+                  eventos = Array(presentation.events)
               } else {
                   Presentation.updateEvents(presentation: presentation, newEvents: eventos)
               }
@@ -108,7 +107,6 @@ struct ListOfEventsView: View {
         }
         .onAppear(){
             eventos = Array(presentation.events)
-            let _ = print(eventos)
         }
         
     }
