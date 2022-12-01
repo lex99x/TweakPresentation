@@ -39,7 +39,7 @@ struct CreatePresentationModal: View {
                             Color(.CorPadraoCard)
                         }
                         .cornerRadius(8)
-                        .foregroundColor(pickerShow ? Color(.RoxoWatch) : Color(.white))
+                        .foregroundColor(pickerShow ? Color(.RoxoWatch) : Color(.DarkText1))
                     }
                     
                     if pickerShow {

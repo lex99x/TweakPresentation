@@ -21,7 +21,7 @@ struct EventCard: View {
 //                        .font(.system(size: 13))
 //                        .foregroundColor(Color(.RoxoWatch))
                     Text(event.eventTitle)
-                        .font(.system(size: 17))
+                        .font(.body)
                         .foregroundColor(Color(.DarkText1))
                     Text("Duration: \(secondsToMinutesSecondsWithText(Int(event.eventDuration)))")
                         .font(.footnote)

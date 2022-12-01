@@ -14,37 +14,44 @@ struct ListOfEventsView: View {
     @State var eventos = [Event()]
     @State private var showingSheet = false
     @Environment(\.editMode) private var editMode
-
+    
     var body: some View {
         ZStack{
             Color(.DarkFundoIphone).edgesIgnoringSafeArea(.all)
             VStack(alignment:.leading, spacing: 0){
                 VStack (alignment: .leading, spacing: 16) {
                     Text(presentation.descript)
-                        .font(.system(size: 17))
+                        .font(.body)
                         .multilineTextAlignment(.leading)
                     HStack {
                         Image(systemName: "applewatch.radiowaves.left.and.right")
-                        Text("Haptics on Apple Watch " + (presentation.haptics ? "enabled" : "disabled"))
-                            .font(.system(size: 15))
+                            .font(.callout)
+                            .foregroundColor(Color(.DarkText1))
+                        Text("Haptics " + (presentation.haptics ? "enabled" : "disabled"))
+                            .font(.callout)
+                            .foregroundColor(Color(.DarkText1))
                     }
                     HStack {
                         Text("\(secondsToMinutesSecondsWithText(presentation.totalTime))")
-                            .font(.system(size: 15))
+                            .font(.callout)
                         Image(systemName: "circle.fill")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 4, height: 4)
                             .foregroundColor(.gray)
                         Text("\(presentation.events.count) events")
-                            .font(.system(size: 15))
+                            .font(.callout)
+                            .foregroundColor(Color(.DarkText1))
                     }
                     HStack (spacing: 5){
                         Image(systemName: "info.circle")
-                        Text("Tap in the timeline to add an event.")
-                            .font(.system(size: 17))
+                        Text("Tap the plus")
+                        Image(systemName: "plus")
+                        Text("button to add an event.")
+                        Spacer()
                     }
-                    .foregroundColor(.gray)
+                    .font(.subheadline)
+                    .foregroundColor(Color(.DarkText2))
                     .padding(.horizontal, 7)
                     .padding(.vertical, 7)
                     .overlay(
@@ -54,18 +61,23 @@ struct ListOfEventsView: View {
                     
                 }
                 .padding(.leading,16)
+                .padding(.trailing,16)
                 
-                
-                
-                VStack{
+                VStack (spacing: 4){
                     List{
                         ForEach(eventos,id:\.self){ evento in
                             EventCard(event: evento)
+                                .padding(.leading,4)
                                 .background(Color(.CorFundoCard))
                                 .cornerRadius(10)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .stroke(Color(.Border), lineWidth: 0.5)
+                                )
                                 .listRowBackground(Color.clear)
                                 .listRowSeparator(.hidden)
                                 .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+                            
                         }
                         .onMove(perform: move)
                     }
@@ -78,9 +90,9 @@ struct ListOfEventsView: View {
                     .listStyle(PlainListStyle())
                     .padding(16)
                 }
-         
+                
             }
-          
+            
             .sheet(isPresented: $showingSheet, content: {
                 CreateEventModal(presentation: presentation)
             })
@@ -97,11 +109,11 @@ struct ListOfEventsView: View {
                 EditButton()
             }
             .onChange(of: editMode!.wrappedValue, perform: { value in
-              if value.isEditing {
-                  eventos = Array(presentation.events)
-              } else {
-                  Presentation.updateEvents(presentation: presentation, newEvents: eventos)
-              }
+                if value.isEditing {
+                    eventos = Array(presentation.events)
+                } else {
+                    Presentation.updateEvents(presentation: presentation, newEvents: eventos)
+                }
             })
             
         }
@@ -112,8 +124,8 @@ struct ListOfEventsView: View {
     }
     
     func move(from source: IndexSet, to destination: Int) {
-          eventos.move(fromOffsets: source, toOffset: destination)
-      }
+        eventos.move(fromOffsets: source, toOffset: destination)
+    }
     
     
     struct ListOfEventsView_Previews: PreviewProvider {

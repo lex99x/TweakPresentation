@@ -20,7 +20,7 @@ struct ListPresentationView: View {
                     Image(systemName: "arrow.down")
                         .font(.subheadline)
                         .foregroundColor(Color(.DarkText2))
-                    Text("Arraste pra baixo pra atualizar")
+                    Text("Swipe down to refresh the list")
                         .font(.subheadline)
                         .foregroundColor(Color(.DarkText2))
                         .multilineTextAlignment(.center)
@@ -33,10 +33,17 @@ struct ListPresentationView: View {
                         NavigationLink(destination: ListOfEventsView(presentation: apresentacao), label: { })
                             .buttonStyle(PlainButtonStyle())
                             .opacity(0)
-
+                        
                         ListCardView(apresentacao: apresentacao)
+                        
                             .background(Color(.CorFundoCard))
                             .cornerRadius(12)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color(.Border), lineWidth: 0.5)
+                            )
+                        
+                        
                     }
                     .padding(0)
                     .background(Color(.DarkFundoIphone))
@@ -66,7 +73,7 @@ struct ListPresentationView: View {
                 .sheet(isPresented: $showingSheet, content: {
                     CreatePresentationModal()
                 })
-
+                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color(.DarkFundoIphone))

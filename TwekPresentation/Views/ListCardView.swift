@@ -27,18 +27,17 @@ struct ListCardView: View {
                     .foregroundColor(Color(.DarkText2))
                 
                 if apresentacao.haptics == true{
-                    Text("Haptics on Apple Watch enabled")
+                    Text("Haptics enabled")
                         .font(.subheadline)
                         .foregroundColor(Color(.DarkText2))
                     
                 }
                     else{
-                        Text("Haptics on Apple Watch disabled")
+                        Text("Haptics disabled")
                             .font(.system(size: 13))
                             .foregroundColor(Color(.DarkText2))
                     }
                 
-             
                 Spacer()
             }.padding(.bottom,8)
             
@@ -64,7 +63,7 @@ struct ListCardView: View {
                     .clipShape(Capsule())
             }
         }
-        .padding()
+        .padding(12)
     }
 }
 

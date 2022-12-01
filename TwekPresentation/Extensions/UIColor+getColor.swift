@@ -13,6 +13,7 @@ extension UIColor {
     static var CorPadraoCard = UIColor(named: "CorPadraoCard")!
     static var CorFundoCard = UIColor(named: "CorFundoCard")!
     static var RoxoWatch = UIColor(named: "RoxoWatch")!
+    static var Border = UIColor(named: "Border")!
     static var CorFundoTextFieldsBo3 = UIColor(named: "CorFundoTextFieldsBo3")!
     static var DarkFundoIphone = UIColor(named: "DarkFundoIphone")!
     static var DarkBG3 = UIColor(named: "DarkBG3")!
