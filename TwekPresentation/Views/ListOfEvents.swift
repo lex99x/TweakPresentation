@@ -11,7 +11,7 @@ import SwiftUI
 struct ListOfEventsView: View {
     
     var presentation: Presentation
-    
+    @State var eventos = [Event()]
     @State private var showingSheet = false
     var body: some View {
         ZStack{
@@ -25,7 +25,7 @@ struct ListOfEventsView: View {
                         Image(systemName: "applewatch.radiowaves.left.and.right")
                         Text("Haptics on Apple Watch " + (presentation.haptics ? "enabled" : "disabled"))
                             .font(.system(size: 15))
-                        }
+                    }
                     HStack {
                         Text("\(secondsToMinutesSecondsWithText(presentation.totalTime))")
                             .font(.system(size: 15))
@@ -49,24 +49,38 @@ struct ListOfEventsView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(.gray, lineWidth: 1)
                     )
-                   
+                    
                 }
                 .padding(.leading,16)
+                
+                
+                
                 VStack{
-                    List(Array(presentation.events)) { event in
-                        EventCard(event: event)
-                            .background(Color(.CorFundoCard))
-                            .cornerRadius(10)
-                            .listRowBackground(Color.clear)
-                            .listRowSeparator(.hidden)
-                            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+                    List{
+                        ForEach(eventos,id:\.self){ evento in
+                            EventCard(event: evento)
+                                .background(Color(.CorFundoCard))
+                                .cornerRadius(10)
+                                .listRowBackground(Color.clear)
+                                .listRowSeparator(.hidden)
+                                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+                        }
+                        .onMove(perform: move)
                     }
+                    
                     .scrollContentBackground(.hidden)
                     .ignoresSafeArea()
                     .listStyle(PlainListStyle())
                     .padding(16)
                 }
+                
+                
+                
+                
             }
+            
+            
+            
             .sheet(isPresented: $showingSheet, content: {
                 CreateEventModal(presentation: presentation)
             })
@@ -80,11 +94,21 @@ struct ListOfEventsView: View {
                     Image(systemName: "plus")
                         .foregroundColor(Color(.RoxoWatch))
                 })
+                EditButton()
             }
             
         }
+        .onAppear(){
+            eventos = Array(presentation.events)
+            let _ = print(eventos)
+        }
+        
+       
     }
     
+    func move(from source: IndexSet, to destination: Int) {
+          eventos.move(fromOffsets: source, toOffset: destination)
+      }
     
     
     struct ListOfEventsView_Previews: PreviewProvider {
