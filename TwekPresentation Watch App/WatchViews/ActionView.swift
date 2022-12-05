@@ -16,7 +16,6 @@ struct ActionsView: View {
     @State var timerColor = Color.white
     
     @State private var isShowingAlert = false
-    
     private static let alertMessage = "Leave practice?\n\nIf you leave now, you will have to start again next time."
     
     var body: some View {

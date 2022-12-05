@@ -11,46 +11,59 @@ struct ListCardView: View {
     var apresentacao : Presentation
     
     var body: some View {
-        VStack(alignment: .leading,spacing: 8){
+        VStack(alignment: .leading,spacing: 4){
             Text(apresentacao.title)
-                .font(.system(size: 17))
+                .font(.body)
                 .bold()
                 .foregroundColor(Color(.DarkText1))
+            
             Text(apresentacao.descript)
-                .font(.system(size: 17))
+                .font(.body)
                 .foregroundColor(Color(.DarkText1))
-            HStack(spacing: 0){
+            
+            HStack(spacing: 4){
                 Image(systemName: "applewatch.radiowaves.left.and.right")
+                    .font(.subheadline)
                     .foregroundColor(Color(.DarkText2))
-                    
+                
                 if apresentacao.haptics == true{
-                    Text("Haptics on Apple Watch abled")
-                        .font(.system(size: 13))
+                    Text("Haptics enabled")
+                        .font(.subheadline)
                         .foregroundColor(Color(.DarkText2))
+                    
                 }
-                else{
-                    Text("Haptics on Apple Watch disabled")
-                        .font(.system(size: 13))
-                        .foregroundColor(Color(.DarkText2))
-                }
-            }
+                    else{
+                        Text("Haptics disabled")
+                            .font(.system(size: 13))
+                            .foregroundColor(Color(.DarkText2))
+                    }
+                
+                Spacer()
+            }.padding(.bottom,8)
+            
             HStack(spacing: 8){
-                Text("\(apresentacao.totalTime)")
-                    .font(.system(size: 15))
+                Text("\(secondsToMinutesSeconds(apresentacao.totalTime))")
+                    .font(.subheadline)
                     .foregroundColor(Color(.DarkText1))
-                    .padding(7)
+                    .padding(.top,6)
+                    .padding(.leading,12)
+                    .padding(.bottom,6)
+                    .padding(.trailing,12)
                     .background(Color(.CorPadraoCard))
                     .clipShape(Capsule())
-                    
-                Text("\(apresentacao.events.count) Events ")
-                    .font(.system(size: 15))
+                
+                Text("\(apresentacao.events.count) Events")
+                    .font(.subheadline)
                     .foregroundColor(Color(.DarkText1))
-                    .padding(7)
+                    .padding(.top,6)
+                    .padding(.leading,12)
+                    .padding(.bottom,6)
+                    .padding(.trailing,12)
                     .background(Color(.CorPadraoCard))
                     .clipShape(Capsule())
             }
         }
-        
+        .padding(12)
     }
 }
 

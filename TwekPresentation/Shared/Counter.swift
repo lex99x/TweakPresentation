@@ -11,9 +11,9 @@ import WatchConnectivity
 final class Counter: ObservableObject {
     var session: WCSession
     let delegate: WCSessionDelegate
-    let subject = PassthroughSubject<Int, Never>()
+    let subject = PassthroughSubject<Data, Never>()
     
-    @Published private(set) var count: Int = 0
+    @Published private(set) var count: Data = Data()
     
     init(session: WCSession = .default) {
         self.delegate = SessionDelegater(countSubject: subject)
@@ -27,17 +27,13 @@ final class Counter: ObservableObject {
     }
     
     func increment() {
-        count += 1
+        var listaDeApresentacoes  = Array(Presentation.readAll())
+        var count = Encode(payload: PresentationToSimplePresentation(apresentacoes: listaDeApresentacoes))
         session.sendMessage(["count": count], replyHandler: nil) { error in
             print(error.localizedDescription)
         }
     }
     
-    func decrement() {
-        count -= 1
-        session.sendMessage(["count": count], replyHandler: nil) { error in
-            print(error.localizedDescription)
-        }
-    }
+    
 }
 

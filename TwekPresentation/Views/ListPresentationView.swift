@@ -15,64 +15,68 @@ struct ListPresentationView: View {
     @State var NaoTemApresentacao:Bool = true
     var body: some View {
         NavigationView {
-            VStack{
-                if NaoTemApresentacao  {
-                    VStack {
-                        Text("Não há nada para ensaiar agora.\n\nToque no ícone “+” para criar uma nova apresentação.")
-                            .foregroundColor(.gray)
-                            .navigationBarTitle("Presentations", displayMode: .inline)
-                            .toolbar {
-                                Button(action: {
-                                    showingSheet.toggle()
-                                }, label: {
-                                    Image(systemName: "plus")
-                                        .foregroundColor(Color(.RoxoWatch))
-                                })
-                            }
-                            .multilineTextAlignment(.center)
-                            .padding(.top, 95)
-                            .sheet(isPresented: $showingSheet, onDismiss:{
-                                    NaoTemApresentacao = false
-                            }, content: {
-                                CreatePresentationModal()
-                            })
-                                                    Spacer()
+            VStack (spacing:0) {
+                HStack {
+                    Image(systemName: "arrow.down")
+                        .font(.subheadline)
+                        .foregroundColor(Color(.DarkText2))
+                    Text("Swipe down to refresh the list")
+                        .font(.subheadline)
+                        .foregroundColor(Color(.DarkText2))
+                        .multilineTextAlignment(.center)
+                }
+                .padding(0)
+                .background(.opacity(0))
+                
+                List(ListaDeApresentacoes) { apresentacao in
+                    ZStack {
+                        NavigationLink(destination: ListOfEventsView(presentation: apresentacao), label: { })
+                            .buttonStyle(PlainButtonStyle())
+                            .opacity(0)
+                        
+                        ListCardView(apresentacao: apresentacao)
+                        
+                            .background(Color(.CorFundoCard))
+                            .cornerRadius(12)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color(.Border), lineWidth: 0.5)
+                            )
+                        
+                        
                     }
-                                    }
-                else{
-                    
-                    List(ListaDeApresentacoes){ apresentacao in
-                        NavigationLink(destination: ListEventsView(presentation: apresentacao), label: {
-                            ListCardView(apresentacao: apresentacao)
-                                .listRowBackground(Color(.CorFundoCard))
-                        })
-                          
-                    }
-                    .scrollContentBackground(.hidden)
-                    .refreshable {
-                        ListaDeApresentacoes = Array(Presentation.readAll())
-                    }
-                    .padding(.top,2)
-                    .navigationBarTitle("Presentations", displayMode: .inline)
-                    .toolbar {
-                        Button(action: {
-                            showingSheet.toggle()
-                            counter.increment()
-                        }, label: {
-                            Image(systemName: "plus")
-                                .foregroundColor(Color(.RoxoWatch))
-                        })
-                    }
-//                    .multilineTextAlignment(.center)
-//                    .padding(.top, 95)
-                    .sheet(isPresented: $showingSheet, content: {
-                        CreatePresentationModal()
+                    .padding(0)
+                    .background(Color(.DarkFundoIphone))
+                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+                    .listRowBackground(Color(.DarkFundoIphone))
+                    .listRowSeparator(.hidden)
+                }
+                .listStyle(PlainListStyle())
+                .padding(16)
+                .scrollContentBackground(.hidden)
+                .refreshable {
+                    ListaDeApresentacoes = Array(Presentation.readAll())
+                    counter.increment()
+                }
+                .ignoresSafeArea()
+                .navigationTitle("Presentations")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    Button(action: {
+                        showingSheet.toggle()
+                        counter.increment()
+                    }, label: {
+                        Image(systemName: "plus")
+                            .foregroundColor(Color(.RoxoWatch))
                     })
                 }
+                .sheet(isPresented: $showingSheet, content: {
+                    CreatePresentationModal()
+                })
+                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color(.DarkFundoIphone))
-            
         }
     }
 }
@@ -82,7 +86,5 @@ struct ListPresentationView_Previews: PreviewProvider {
         ListPresentationView()
     }
 }
-
-
 
 
