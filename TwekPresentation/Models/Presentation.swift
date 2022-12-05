@@ -48,6 +48,7 @@ class Presentation: Object,Identifiable  {
         
         return realm.objects(Presentation.self)
         
+        
     }
     
     func log() {
@@ -56,6 +57,16 @@ class Presentation: Object,Identifiable  {
         print(totalTime)
         print(haptics)
         print(events)
+    }
+    
+    static func updateEvents(presentation:Presentation,newEvents:[Event]){
+        let realm = try! Realm()
+           try! realm.write {
+               presentation.events.removeAll()
+               presentation.events.append(objectsIn: newEvents)
+               
+               
+           }
     }
     
 }

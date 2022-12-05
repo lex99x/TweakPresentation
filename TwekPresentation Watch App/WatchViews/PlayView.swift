@@ -2,76 +2,95 @@
 import SwiftUI
 
 struct PlayView: View {
-    @StateObject var counter = Counter()
-
+    
     @State var timeRemaining = 3
     @State var contando = false
     @State var jump = false
-    @State var presentation = getMockedPresentations()
+    @State var presentation: SimplePresentation
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-   
+    
+    //    @State var showingSheet = false
+    
     var body: some View {
-        NavigationView{
-            ZStack{
-                VStack{
-                    Text("\(counter.count)")
-                        .font(.system(size:17))
-                        .offset(y:5)
-                        .padding()
-                    ZStack{
+        
+        NavigationView {
+            ZStack () {
+                VStack (alignment: .center, spacing: 4) {
+                    Text("\(presentation.title)")
+                        .font(.headline)
+                        .scenePadding()
+                        .padding(.top,8)
+                        .foregroundColor(Color(.DarkText1))
+                    
+                    Spacer()
+                    
+                    ZStack {
                         Circle()
                             .fill(Color(.RoxoWatch))
-                            .frame(width: 116, height: 116, alignment: .center)
+                            .frame(width: 88, height: 88)
                             .onTapGesture(perform: {
                                 contando = true
                             })
                         
                         Image(systemName: "play.fill")
-                            .resizable()
-                            .frame(width: 34, height: 34)
+                            .font(.title)
+                            .foregroundColor(Color(.DarkText1))
+                            .padding(.leading,2)
                             .onTapGesture(perform: {
                                 contando = true
                             })
                     }
-                    HStack(spacing:8){
-                        Text("\(presentation[0].events.count) eventos")
-                            .frame(width: 80)
-                            .background(Color(.CorFundoCard))
-                            .cornerRadius(8)
-                            .font(.system(size:14))
-                        if (presentation[0].totalTime >= 3600){
-                            Text("\(secondsToHoursMinutesSeconds(presentation[0].totalTime))")
-                                .frame(width: 80)
-                                .background(Color(.CorFundoCard))
-                                .cornerRadius(8)
-                                .font(.system(size:14))
+                    
+                    Spacer()
+                    
+                    HStack(spacing: 8) {
+                        Text("\(presentation.events.count) eventos")
+                            .font(.footnote)
+                            .foregroundColor(Color(.DarkText1))
+                            .padding(.top,4)
+                            .padding(.leading,8)
+                            .padding(.bottom,4)
+                            .padding(.trailing,8)
+                            .background(Color(.CorPadraoCard))
+                            .clipShape(Capsule())
+                        
+                        if (presentation.totalTime >= 3600){
+                            Text("\(secondsToHoursMinutesSeconds(presentation.totalTime))")
+                                .font(.footnote)
+                                .foregroundColor(Color(.DarkText1))
+                                .padding(.top,4)
+                                .padding(.leading,8)
+                                .padding(.bottom,4)
+                                .padding(.trailing,8)
+                                .background(Color(.CorPadraoCard))
+                                .clipShape(Capsule())
                         }
                         else{
-                            Text("\(secondsToMinutesSeconds(presentation[0].totalTime))")
-                                .frame(width: 80)
-                                .background(Color(.CorFundoCard))
-                                .cornerRadius(8)
-                                .font(.system(size:14))
+                            Text("\(secondsToMinutesSeconds(presentation.totalTime))")
+                                .font(.footnote)
+                                .foregroundColor(Color(.DarkText1))
+                                .padding(.top,4)
+                                .padding(.leading,8)
+                                .padding(.bottom,4)
+                                .padding(.trailing,8)
+                                .background(Color(.CorPadraoCard))
+                                .clipShape(Capsule())
                         }
                     }
-                    .offset(y:20)
-                    .padding(.bottom,20)
-                    
                 }
-               
                 
                 if contando == true{
                     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-        
-                    ZStack{
+                    
+                    ZStack {
                         Color.black
                         Circle()
                             .fill(Color(.CorPadraoCard))
-                            .frame(width: 116, height: 116, alignment: .center)
+                            .frame(width: 88, height: 88, alignment: .center)
                         Text("\(timeRemaining)")
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(.DarkText1))
                             .bold()
-                            .font(.system(size:32))
+                            .font(.largeTitle)
                             .onReceive(timer) { _ in
                                 if timeRemaining > 0 {
                                     timeRemaining -= 1
@@ -82,23 +101,44 @@ struct PlayView: View {
                                     timer.upstream.connect().cancel()
                                 }
                             }
-                        
                     }
                     
                 }
                 if jump == true {
-                    NavigationLink(destination: ManualPresentationView(), isActive: $jump) {
+                    NavigationLink(destination: ManualPresentationView(presentation: presentation), isActive: $jump) {
                         EmptyView()
                     }
-                    
                 }
-          
             }
         }
+        
+        //        .navigationBarBackButtonHidden()
+        //        .toolbar {
+        //            ToolbarItem(placement: .cancellationAction) {
+        //
+        //                if jump {
+        //
+        //                    Button(action: {
+        //                        showingSheet.toggle()
+        //                    }, label: {
+        //                        HStack {
+        //                            Image(systemName: "chevron.backward.circle.fill")
+        //                                .foregroundColor(Color(.RoxoWatch))
+        //                        }
+        //                    })
+        //
+        //                }
+        //           }
+        //        }
+        //        .sheet(isPresented: $showingSheet) {
+        //            QuitView(presentation: presentation)
+        //        }
     }
+    
 }
-struct playView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlayView()
-    }
-}
+
+//struct playView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlayView(presentation: SimplePresentation())
+//    }
+//}

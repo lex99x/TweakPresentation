@@ -26,16 +26,18 @@ struct EventCardView: View {
                                 .foregroundColor(Color(.DarkText2))
                         }
                         Spacer()
-                        Text("Keywords or, 3 lines maximum.")
-                            .padding(.horizontal, 15)
-                            .padding(.vertical, 15)
+                        Text("Keywords or sentence, 3 lines maximum.")
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 12)
                             .foregroundColor(Color(.DarkText1))
+                            .frame(width: 200)
                             .background(Color(.DarkBG4))
+                            .cornerRadius(8)
                     }
-                    .padding()
+                    .padding(12)
                 }
                 .background(Color(.DarkBG3))
-                .cornerRadius(10)
+                .cornerRadius(8)
             }
         }
     }

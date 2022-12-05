@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		17664FC8292DAFDC00441630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A1D44C292D910E006F9301 /* Assets.xcassets */; };
+		5148846129363E800096682F /* ListOfEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148846029363E800096682F /* ListOfEvents.swift */; };
+		514884652936409C0096682F /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514884642936409C0096682F /* EventCard.swift */; };
 		51A1D449292D910C006F9301 /* TwekPresentationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D448292D910C006F9301 /* TwekPresentationApp.swift */; };
 		51A1D44D292D910E006F9301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A1D44C292D910E006F9301 /* Assets.xcassets */; };
 		51A1D456292D910E006F9301 /* Tweak.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 51A1D455292D910E006F9301 /* Tweak.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -43,6 +45,12 @@
 		51A1D4AF292D99E2006F9301 /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4AE292D99E2006F9301 /* EventCard.swift */; };
 		51A1D4B1292D99F5006F9301 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4B0292D99F5006F9301 /* ActionView.swift */; };
 		51A1D4B3292D99FF006F9301 /* QuitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4B2292D99FF006F9301 /* QuitView.swift */; };
+		51A1D4C1292DCA15006F9301 /* PresentationWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C0292DCA15006F9301 /* PresentationWithoutRealm.swift */; };
+		51A1D4C2292DCA15006F9301 /* PresentationWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C0292DCA15006F9301 /* PresentationWithoutRealm.swift */; };
+		51A1D4C4292DCA23006F9301 /* EventWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */; };
+		51A1D4C5292DCA23006F9301 /* EventWithoutRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */; };
+		51A1D4CB292DEAF6006F9301 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A1D4CA292DEAF6006F9301 /* ListView.swift */; };
+		9867E33D2934FB2400923E4C /* PlaceholderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9867E33C2934FB2400923E4C /* PlaceholderColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +79,8 @@
 
 /* Begin PBXFileReference section */
 		174E2995292DA7BB002E100A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5148846029363E800096682F /* ListOfEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfEvents.swift; sourceTree = "<group>"; };
+		514884642936409C0096682F /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
 		51A1D445292D910C006F9301 /* TwekPresentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwekPresentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A1D448292D910C006F9301 /* TwekPresentationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwekPresentationApp.swift; sourceTree = "<group>"; };
 		51A1D44C292D910E006F9301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +106,10 @@
 		51A1D4AE292D99E2006F9301 /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
 		51A1D4B0292D99F5006F9301 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		51A1D4B2292D99FF006F9301 /* QuitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitView.swift; sourceTree = "<group>"; };
+		51A1D4C0292DCA15006F9301 /* PresentationWithoutRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationWithoutRealm.swift; sourceTree = "<group>"; };
+		51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWithoutRealm.swift; sourceTree = "<group>"; };
+		51A1D4CA292DEAF6006F9301 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		9867E33C2934FB2400923E4C /* PlaceholderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +200,8 @@
 				51A1D478292D9205006F9301 /* Presentation.swift */,
 				51A1D47B292D920F006F9301 /* DayTime.swift */,
 				51A1D47E292D921A006F9301 /* Event.swift */,
+				51A1D4C0292DCA15006F9301 /* PresentationWithoutRealm.swift */,
+				51A1D4C3292DCA23006F9301 /* EventWithoutRealm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +213,8 @@
 				51A1D484292D926B006F9301 /* CreatePresentationModal.swift */,
 				51A1D48A292D9291006F9301 /* ListEventsView.swift */,
 				51A1D48D292D92A4006F9301 /* ListCardView.swift */,
+				514884642936409C0096682F /* EventCard.swift */,
+				5148846029363E800096682F /* ListOfEvents.swift */,
 				51A1D490292D92BB006F9301 /* CreateEventModal.swift */,
 				51A1D493292D92CA006F9301 /* EventCardView.swift */,
 			);
@@ -207,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				51A1D496292D92E6006F9301 /* UIColor+getColor.swift */,
+				9867E33C2934FB2400923E4C /* PlaceholderColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				51A1D4A8292D99BA006F9301 /* ManualPresentationView.swift */,
+				51A1D4CA292DEAF6006F9301 /* ListView.swift */,
 				51A1D4AA292D99C4006F9301 /* PlayView.swift */,
 				51A1D4AC292D99D0006F9301 /* TimerView.swift */,
 				51A1D4AE292D99E2006F9301 /* EventCard.swift */,
@@ -349,14 +369,19 @@
 				51A1D476292D91D9006F9301 /* Counter.swift in Sources */,
 				51A1D485292D926B006F9301 /* CreatePresentationModal.swift in Sources */,
 				51A1D491292D92BB006F9301 /* CreateEventModal.swift in Sources */,
+				5148846129363E800096682F /* ListOfEvents.swift in Sources */,
+				51A1D4C4292DCA23006F9301 /* EventWithoutRealm.swift in Sources */,
 				51A1D473292D91AC006F9301 /* SessionDelegate.swift in Sources */,
 				51A1D494292D92CA006F9301 /* EventCardView.swift in Sources */,
 				51A1D497292D92E6006F9301 /* UIColor+getColor.swift in Sources */,
 				51A1D479292D9205006F9301 /* Presentation.swift in Sources */,
+				9867E33D2934FB2400923E4C /* PlaceholderColor.swift in Sources */,
 				51A1D449292D910C006F9301 /* TwekPresentationApp.swift in Sources */,
+				51A1D4C1292DCA15006F9301 /* PresentationWithoutRealm.swift in Sources */,
 				51A1D49A292D9309006F9301 /* SecondsTransformationFunc.swift in Sources */,
 				51A1D47F292D921A006F9301 /* Event.swift in Sources */,
 				51A1D48E292D92A4006F9301 /* ListCardView.swift in Sources */,
+				514884652936409C0096682F /* EventCard.swift in Sources */,
 				51A1D47C292D920F006F9301 /* DayTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,13 +393,16 @@
 				51A1D477292D91D9006F9301 /* Counter.swift in Sources */,
 				51A1D474292D91AC006F9301 /* SessionDelegate.swift in Sources */,
 				51A1D4A9292D99BA006F9301 /* ManualPresentationView.swift in Sources */,
+				51A1D4CB292DEAF6006F9301 /* ListView.swift in Sources */,
 				51A1D47A292D9205006F9301 /* Presentation.swift in Sources */,
 				51A1D4B3292D99FF006F9301 /* QuitView.swift in Sources */,
 				51A1D45B292D910E006F9301 /* TwekPresentationApp.swift in Sources */,
 				51A1D4B1292D99F5006F9301 /* ActionView.swift in Sources */,
 				51A1D4AD292D99D0006F9301 /* TimerView.swift in Sources */,
 				51A1D49B292D9309006F9301 /* SecondsTransformationFunc.swift in Sources */,
+				51A1D4C5292DCA23006F9301 /* EventWithoutRealm.swift in Sources */,
 				51A1D4A6292D96C3006F9301 /* UIColor+getColor.swift in Sources */,
+				51A1D4C2292DCA15006F9301 /* PresentationWithoutRealm.swift in Sources */,
 				51A1D480292D921A006F9301 /* Event.swift in Sources */,
 				51A1D47D292D920F006F9301 /* DayTime.swift in Sources */,
 				51A1D4AB292D99C4006F9301 /* PlayView.swift in Sources */,
@@ -519,15 +547,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tweakpresentation.app.watch;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tweakpresentation.app.watchkitapp;
 				PRODUCT_NAME = Tweak;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -548,8 +576,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tweakpresentation.app.watch;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tweakpresentation.app.watchkitapp;
 				PRODUCT_NAME = Tweak;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -557,7 +585,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -574,20 +602,19 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TwekPresentation/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TwekPresentation;
+				INFOPLIST_KEY_CFBundleDisplayName = Tweak;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tweakpresentation.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -613,20 +640,19 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TwekPresentation/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TwekPresentation;
+				INFOPLIST_KEY_CFBundleDisplayName = Tweak;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tweakpresentation.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

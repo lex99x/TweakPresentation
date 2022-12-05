@@ -9,35 +9,21 @@ import SwiftUI
 
 struct ManualPresentationView: View {
     
-    @State var presentation = getMockedPresentations()
-//    @State private var showingSheet = false
-    
+    @State var presentation: SimplePresentation
+
     var body: some View {
-        
-//        let longPressGesture = LongPressGesture()
-//            .onEnded({value in
-//                showingSheet = true
-//            })
-        NavigationView{
+        NavigationView {
             VStack {
-                TimerView(presentation: presentation[0])
-//                    .gesture(longPressGesture)
-//                    .sheet(isPresented: $showingSheet) {
-//                        ActionsView()
-//                            .navigationBarHidden(true)
-//                    }
-                EventCardShow(apresentacao: presentation[0])
+                TimerView(presentation: presentation)
+                EventCardShow(apresentacao: presentation)
             }
         }
-      
-        
     }
     
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ManualPresentationView()
-    }
-}
-
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ManualPresentationView()
+//    }
+//}

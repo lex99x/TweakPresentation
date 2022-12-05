@@ -18,13 +18,15 @@ struct CreatePresentationModal: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Presentation Details")) {
+                Section(header: Text("Presentation Details").foregroundColor(Color(.DarkText2))) {
                     
                     TextField("Title", text: $presentation.title)
+                    
                     TextField("Description (optional)", text: $presentation.descript)
                     
                     HStack {
                         Text("Duration")
+                            .foregroundColor(Color(.DarkText1))
                         Spacer()
                         Button(formatDayTime(hour: selectedDuration.hour,
                                              minute: selectedDuration.minute,
@@ -37,7 +39,7 @@ struct CreatePresentationModal: View {
                             Color(.CorPadraoCard)
                         }
                         .cornerRadius(8)
-                        .foregroundColor(pickerShow ? Color(.RoxoWatch) : Color(.white))
+                        .foregroundColor(pickerShow ? Color(.RoxoWatch) : Color(.DarkText1))
                     }
                     
                     if pickerShow {
@@ -65,24 +67,24 @@ struct CreatePresentationModal: View {
                             .pickerStyle(.wheel)
                             Text("sec")
                         }
+                        .foregroundColor(Color(.DarkText1))
                         .frame(height: 50)
                         
                     }
                     
-                }
-                .listRowBackground(Color(.CorFundoTextFieldsBo3))
+                }.listRowBackground(Color(.DarkBG3))
                 
                 Section(header: Text("Preferences"),
-                        footer: Text("Haptics feedbacks are triggered at the end of each event while practicing your presentation using Apple Watch.")
-                                    .font(.system(size: 11))) {
+                        footer: Text("Haptics feedbacks happen at the end of each event while practicing with your Apple Watch.")
+                                    .font(.footnote)) {
                     
                     Toggle(isOn: $presentation.haptics) {
                         Text("Haptics feedback")
+                            .foregroundColor(Color(.DarkText1))
                     }
                     .tint(Color(.RoxoWatch))
                     
-                }.listRowBackground(Color(.CorFundoTextFieldsBo3))
-                
+                }.listRowBackground(Color(.DarkBG3))
             }
             .scrollContentBackground(.hidden)
             .background(Color(.CorFundoCard))
@@ -96,13 +98,11 @@ struct CreatePresentationModal: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
+                        
                         presentation.totalTime = dayTimeToSeconds(hour: selectedDuration.hour,
                                                                   minute: selectedDuration.minute,
                                                                   second: selectedDuration.second)
-                        
-                        presentation.log()
                         presentation.save()
-                        print(Presentation.readAll())
                         cancelar.wrappedValue.dismiss()
                     }
                     .foregroundColor(Color(.RoxoWatch))
